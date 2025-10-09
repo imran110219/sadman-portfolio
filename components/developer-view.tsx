@@ -1,58 +1,88 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Github, ExternalLink, Star } from "lucide-react"
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink, Star } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack marketplace with real-time inventory and payment processing",
-    tech: ["Next.js", "PostgreSQL", "Stripe", "Redis"],
-    stars: 234,
-    link: "#",
-  },
-  {
-    title: "DevOps Dashboard",
-    description: "Real-time monitoring and deployment management for microservices",
-    tech: ["React", "Node.js", "Docker", "Kubernetes"],
-    stars: 189,
-    link: "#",
-  },
-  {
-    title: "AI Content Generator",
-    description: "ML-powered content creation tool with custom fine-tuning",
-    tech: ["Python", "TensorFlow", "FastAPI", "React"],
+    title: "Open Care",
+    description:
+      "Scalable health-tech platform connecting patients, doctors, and organizations in Bangladesh. Comprehensive healthcare management system.",
+    tech: ["Java", "Spring Boot", "React.js", "PostgreSQL", "REST APIs"],
     stars: 456,
     link: "#",
   },
   {
-    title: "Real-time Chat App",
-    description: "Scalable messaging platform with WebSocket support",
-    tech: ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    title: "Exam Management System",
+    description:
+      "Java-based system serving 30,000+ students with real-time dashboards, Crystal Reports, and optimized performance using Redis.",
+    tech: ["Java", "Spring Boot", "PostgreSQL", "Flutter", "Crystal Report"],
     stars: 312,
     link: "#",
   },
-]
+  {
+    title: "National Electronic Government Procurement System (e-GP)",
+    description:
+      "Large-scale government procurement platform with secure file handling, advanced data modeling, and integrity features for transparent procurement processes.",
+    tech: ["Java", "Spring Boot", "PostgreSQL", "JavaScript", "Security"],
+    stars: 523,
+    link: "#",
+  },
+  {
+    title: "Keycloak Authentication Service",
+    description:
+      "Enterprise-grade authentication and authorization system with Keycloak integration for secure, scalable user management.",
+    tech: ["Spring Boot", "Keycloak", "REST APIs", "PostgreSQL"],
+    stars: 189,
+    link: "#",
+  },
+];
 
 const techStack = [
-  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind"] },
-  { category: "Backend", items: ["Node.js", "Python", "Go", "PostgreSQL"] },
-  { category: "DevOps", items: ["Docker", "Kubernetes", "AWS", "CI/CD"] },
-  { category: "Tools", items: ["Git", "VS Code", "Figma", "Linear"] },
-]
+  {
+    category: "Backend",
+    items: ["Java", "Spring Boot", "Hibernate", "REST APIs"],
+  },
+  {
+    category: "Frontend",
+    items: ["React.js", "Next.js", "Redux", "JavaScript"],
+  },
+  {
+    category: "Mobile & Reports",
+    items: ["Flutter", "Crystal Report", "Mobile Apps", "PDF Generation"],
+  },
+  {
+    category: "Databases",
+    items: ["PostgreSQL", "MySQL", "Redis", "Liquibase"],
+  },
+  {
+    category: "DevOps",
+    items: ["Docker", "Kubernetes", "GitHub Actions", "Linux/Unix"],
+  },
+];
 
 export function DeveloperView() {
   return (
     <div className="max-w-6xl mx-auto space-y-12">
-      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-center"
+      >
         <h2 className="text-4xl md:text-5xl font-bold mb-4">Projects & Code</h2>
-        <p className="text-xl text-muted-foreground">Building with modern technologies and best practices</p>
+        <p className="text-xl text-muted-foreground">
+          Building with modern technologies and best practices
+        </p>
       </motion.div>
 
       {/* Tech Stack Radar */}
-      <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.1 }}
+      >
         <h3 className="text-2xl font-bold mb-6">Tech Stack</h3>
         <div className="grid md:grid-cols-4 gap-4">
           {techStack.map((stack, index) => (
@@ -63,10 +93,15 @@ export function DeveloperView() {
               transition={{ delay: 0.2 + index * 0.1 }}
             >
               <Card className="p-6 bg-card">
-                <h4 className="font-bold mb-4 text-accent text-card-foreground">{stack.category}</h4>
+                <h4 className="font-bold mb-4 text-accent text-card-foreground">
+                  {stack.category}
+                </h4>
                 <ul className="space-y-2">
                   {stack.items.map((item) => (
-                    <li key={item} className="text-sm text-muted-foreground flex items-center gap-2">
+                    <li
+                      key={item}
+                      className="text-sm text-muted-foreground flex items-center gap-2"
+                    >
                       <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                       {item}
                     </li>
@@ -79,7 +114,11 @@ export function DeveloperView() {
       </motion.section>
 
       {/* Featured Projects */}
-      <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
         <h3 className="text-2xl font-bold mb-6">Featured Projects</h3>
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
@@ -92,26 +131,41 @@ export function DeveloperView() {
             >
               <Card className="p-6 h-full flex flex-col bg-card">
                 <div className="flex items-start justify-between mb-3">
-                  <h4 className="text-xl font-bold text-card-foreground">{project.title}</h4>
+                  <h4 className="text-xl font-bold text-card-foreground">
+                    {project.title}
+                  </h4>
                   <div className="flex items-center gap-1 text-muted-foreground">
                     <Star className="h-4 w-4 fill-current" />
                     <span className="text-sm">{project.stars}</span>
                   </div>
                 </div>
-                <p className="text-muted-foreground mb-4 flex-grow">{project.description}</p>
+                <p className="text-muted-foreground mb-4 flex-grow">
+                  {project.description}
+                </p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
-                    <span key={tech} className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground">
+                    <span
+                      key={tech}
+                      className="text-xs px-3 py-1 rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tech}
                     </span>
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <Button variant="outline" size="sm" className="gap-2 bg-transparent">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="gap-2 bg-transparent"
+                  >
                     <Github className="h-4 w-4" />
                     Code
                   </Button>
-                  <Button variant="outline" size="sm" className="gap-2 bg-transparent">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="gap-2 bg-transparent"
+                  >
                     <ExternalLink className="h-4 w-4" />
                     Demo
                   </Button>
@@ -123,7 +177,11 @@ export function DeveloperView() {
       </motion.section>
 
       {/* Code Example */}
-      <motion.section initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.3 }}
+      >
         <h3 className="text-2xl font-bold mb-6">Code Sample</h3>
         <Card className="p-6 bg-card">
           <pre className="text-sm overflow-x-auto">
@@ -158,5 +216,5 @@ export function useFetch<T>(url: string) {
         </Card>
       </motion.section>
     </div>
-  )
+  );
 }
