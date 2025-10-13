@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { DownloadCVButton } from "@/components/download-cv-button";
+import { ProfileAvatar } from "@/components/profile-avatar";
 import { LiveMetrics } from "@/components/live-metrics";
 import { RecruiterView } from "@/components/recruiter-view";
 import { DeveloperView } from "@/components/developer-view";
@@ -50,6 +51,11 @@ export default function Home() {
               transition={{ delay: 0.2 }}
               className="text-center max-w-4xl mx-auto mb-16"
             >
+              {/* Profile Avatar */}
+              <div className="flex justify-center mb-8">
+                <ProfileAvatar size={150} />
+              </div>
+
               <h1 className="text-6xl md:text-8xl font-bold mb-6 text-balance">
                 Sadman
               </h1>

@@ -1,0 +1,25 @@
+# Profile Photo Placeholder
+
+This is a placeholder for your profile photo.
+
+**To add your photo:**
+
+1. Replace this file with your actual photo
+2. Name it: `profile.jpg` or `profile.png`
+3. Recommended size: 500x500px or larger (square)
+4. Keep file size under 1MB
+
+**Quick Command:**
+```bash
+# From your project root
+cp ~/path/to/your-photo.jpg public/profile.jpg
+```
+
+**Using Finder:**
+1. Navigate to: `/Users/imran/Documents/Repo/Cipher Text/sadman-portfolio/public/`
+2. Drag and drop your photo here
+3. Rename to: `profile.jpg`
+
+The avatar component will automatically display your photo with beautiful glassmorphism effects!
+
+For detailed instructions, see: `/PROFILE_PHOTO_GUIDE.md`
