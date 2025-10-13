@@ -1,0 +1,11 @@
+# PLACEHOLDER
+
+This is a placeholder file. Replace this with your actual CV/Resume PDF file.
+
+**Expected filename**: Sadman_Sobhan_CV.pdf
+
+To add your CV:
+1. Delete or replace this file
+2. Add your PDF with the exact name: `Sadman_Sobhan_CV.pdf`
+3. Ensure the file size is optimized (under 5MB recommended)
+4. Test the download by visiting the Recruiter view in your portfolio

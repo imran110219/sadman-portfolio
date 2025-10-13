@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Target, Code2, Rocket, Moon, Sun } from "lucide-react";
+import { Target, Code2, Rocket } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { DownloadCVButton } from "@/components/download-cv-button";
 import { LiveMetrics } from "@/components/live-metrics";
 import { RecruiterView } from "@/components/recruiter-view";
 import { DeveloperView } from "@/components/developer-view";
@@ -16,7 +18,6 @@ type ViewType = "recruiter" | "developer" | "client" | null;
 
 export default function Home() {
   const [activeView, setActiveView] = useState<ViewType>(null);
-  const [isDark, setIsDark] = useState(true);
 
   const handleViewChange = (view: ViewType) => {
     setActiveView(view);
@@ -25,145 +26,128 @@ export default function Home() {
     }
   };
 
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle("dark");
-  };
-
   return (
-    <div className={isDark ? "dark" : ""}>
-      <div className="min-h-screen bg-background text-foreground">
-        {/* Dark Mode Toggle */}
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={toggleTheme}
-          className="fixed top-6 right-6 z-50 rounded-full"
-        >
-          {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-        </Button>
+    <div className="min-h-screen bg-background text-foreground">
+      {/* Theme Toggle */}
+      <ThemeToggle />
 
-        {/* Live Metrics Widget */}
-        <LiveMetrics />
+      {/* Live Metrics Widget */}
+      <LiveMetrics />
 
-        {/* Hero Section */}
-        <AnimatePresence mode="wait">
-          {!activeView ? (
-            <motion.main
-              key="hero"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="container mx-auto px-4 py-20 min-h-screen flex flex-col items-center justify-center"
-            >
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.2 }}
-                className="text-center max-w-4xl mx-auto mb-16"
-              >
-                <h1 className="text-6xl md:text-8xl font-bold mb-6 text-balance">
-                  Sadman
-                </h1>
-                <p className="text-xl md:text-2xl text-muted-foreground mb-4 text-balance">
-                  Senior Software Engineer
-                </p>
-                <p className="text-lg md:text-xl text-muted-foreground text-balance">
-                  Building scalable systems & digital products
-                </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.4 }}
-                className="w-full max-w-4xl"
-              >
-                <p className="text-center text-muted-foreground mb-8 text-lg">
-                  Choose your path:
-                </p>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Card
-                      className="p-8 cursor-pointer hover:border-primary transition-colors bg-card"
-                      onClick={() => handleViewChange("recruiter")}
-                    >
-                      <Target className="h-12 w-12 mb-4 text-primary" />
-                      <h3 className="text-2xl font-bold mb-2">
-                        I'm a Recruiter
-                      </h3>
-                      <p className="text-muted-foreground">
-                        View skills, experience timeline, and download resume
-                      </p>
-                    </Card>
-                  </motion.div>
-
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Card
-                      className="p-8 cursor-pointer hover:border-accent transition-colors bg-card"
-                      onClick={() => handleViewChange("developer")}
-                    >
-                      <Code2 className="h-12 w-12 mb-4 text-accent" />
-                      <h3 className="text-2xl font-bold mb-2">
-                        I'm a Developer
-                      </h3>
-                      <p className="text-muted-foreground">
-                        Explore projects, tech stack, and code examples
-                      </p>
-                    </Card>
-                  </motion.div>
-
-                  <motion.div
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    <Card
-                      className="p-8 cursor-pointer hover:border-chart-3 transition-colors bg-card"
-                      onClick={() => handleViewChange("client")}
-                    >
-                      <Rocket className="h-12 w-12 mb-4 text-chart-3" />
-                      <h3 className="text-2xl font-bold mb-2">
-                        I'm a Client/Founder
-                      </h3>
-                      <p className="text-muted-foreground">
-                        See products, services, and case studies
-                      </p>
-                    </Card>
-                  </motion.div>
-                </div>
-              </motion.div>
-            </motion.main>
-          ) : (
+      {/* Hero Section */}
+      <AnimatePresence mode="wait">
+        {!activeView ? (
+          <motion.main
+            key="hero"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="container mx-auto px-4 py-20 min-h-screen flex flex-col items-center justify-center"
+          >
             <motion.div
-              key="content"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="container mx-auto px-4 py-20 min-h-screen"
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="text-center max-w-4xl mx-auto mb-16"
             >
-              <Button
-                variant="ghost"
-                onClick={() => handleViewChange(null)}
-                className="mb-8"
-              >
-                ← Back to Home
-              </Button>
-
-              {activeView === "recruiter" && <RecruiterView />}
-              {activeView === "developer" && <DeveloperView />}
-              {activeView === "client" && <ClientView />}
+              <h1 className="text-6xl md:text-8xl font-bold mb-6 text-balance">
+                Sadman
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-4 text-balance">
+                Senior Software Engineer
+              </p>
+              <p className="text-lg md:text-xl text-muted-foreground text-balance mb-6">
+                Building scalable systems & digital products
+              </p>
+              <DownloadCVButton variant="outline" size="lg" />
             </motion.div>
-          )}
-        </AnimatePresence>
 
-        <Footer />
-      </div>
+            <motion.div
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.4 }}
+              className="w-full max-w-4xl"
+            >
+              <p className="text-center text-muted-foreground mb-8 text-lg">
+                Choose your path:
+              </p>
+              <div className="grid md:grid-cols-3 gap-6">
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Card
+                    className="p-8 cursor-pointer hover:border-primary transition-colors bg-card"
+                    onClick={() => handleViewChange("recruiter")}
+                  >
+                    <Target className="h-12 w-12 mb-4 text-primary" />
+                    <h3 className="text-2xl font-bold mb-2">I'm a Recruiter</h3>
+                    <p className="text-muted-foreground">
+                      View skills, experience timeline, and download resume
+                    </p>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Card
+                    className="p-8 cursor-pointer hover:border-accent transition-colors bg-card"
+                    onClick={() => handleViewChange("developer")}
+                  >
+                    <Code2 className="h-12 w-12 mb-4 text-accent" />
+                    <h3 className="text-2xl font-bold mb-2">I'm a Developer</h3>
+                    <p className="text-muted-foreground">
+                      Explore projects, tech stack, and code examples
+                    </p>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Card
+                    className="p-8 cursor-pointer hover:border-chart-3 transition-colors bg-card"
+                    onClick={() => handleViewChange("client")}
+                  >
+                    <Rocket className="h-12 w-12 mb-4 text-chart-3" />
+                    <h3 className="text-2xl font-bold mb-2">
+                      I'm a Client/Founder
+                    </h3>
+                    <p className="text-muted-foreground">
+                      See products, services, and case studies
+                    </p>
+                  </Card>
+                </motion.div>
+              </div>
+            </motion.div>
+          </motion.main>
+        ) : (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="container mx-auto px-4 py-20 min-h-screen"
+          >
+            <Button
+              variant="ghost"
+              onClick={() => handleViewChange(null)}
+              className="mb-8"
+            >
+              ← Back to Home
+            </Button>
+
+            {activeView === "recruiter" && <RecruiterView />}
+            {activeView === "developer" && <DeveloperView />}
+            {activeView === "client" && <ClientView />}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <Footer />
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { DownloadCVButton } from "@/components/download-cv-button";
 import {
   Download,
   Briefcase,
@@ -70,10 +71,7 @@ export function RecruiterView() {
         <p className="text-xl text-muted-foreground mb-8">
           9+ years building enterprise systems & scalable solutions
         </p>
-        <Button size="lg" className="gap-2">
-          <Download className="h-5 w-5" />
-          Download Resume
-        </Button>
+        <DownloadCVButton size="lg" className="gap-2" />
       </motion.div>
 
       {/* Core Skills Overview */}
