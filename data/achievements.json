@@ -1,0 +1,20 @@
+{
+  "achievements": [
+    {
+      "title": "Open Care - Health-Tech Platform",
+      "description": "Scalable health-tech platform connecting patients, doctors, and organizations across Bangladesh"
+    },
+    {
+      "title": "Exam Management System",
+      "description": "Java-based system serving 30,000+ students with Crystal Reports, Flutter mobile app, and real-time dashboards"
+    },
+    {
+      "title": "National e-GP System",
+      "description": "Electronic Government Procurement platform with secure file handling, data modeling, and integrity features"
+    },
+    {
+      "title": "Team Leadership & Architecture",
+      "description": "Leading development teams and architecting secure, scalable enterprise solutions with Keycloak authentication"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "experiences": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Penta Global Ltd.",
+      "period": "2023 - Present",
+      "description": "Leading teams, architecting secure & scalable systems, and integrating Keycloak-based authentication solutions."
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Dynamic Solution Innovators Ltd.",
+      "period": "2022 - 2023",
+      "description": "Built an exam management system serving 30,000+ students, with real-time dashboards and optimized performance using Redis."
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Dohatec New Media",
+      "period": "2016 - 2021",
+      "description": "Contributed to the National Electronic Government Procurement System, improving user engagement and ensuring data integrity."
+    },
+    {
+      "title": ".NET Developer",
+      "company": "Earlier Roles",
+      "period": "2014 - 2016",
+      "description": "Full-stack development with .NET, WordPress, and PHP, building strong foundation in web technologies."
+    }
+  ]
+}

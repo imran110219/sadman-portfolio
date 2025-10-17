@@ -1,0 +1,32 @@
+{
+  "recruiterSkills": [
+    { "name": "Java & Spring Boot", "level": 95 },
+    { "name": "React & Next.js", "level": 90 },
+    { "name": "PostgreSQL & MySQL", "level": 88 },
+    { "name": "Docker & Kubernetes", "level": 85 },
+    { "name": "REST APIs & Microservices", "level": 92 },
+    { "name": "Redis & Caching", "level": 82 }
+  ],
+  "techStack": [
+    {
+      "category": "Backend",
+      "items": ["Java", "Spring Boot", "Hibernate", "REST APIs"]
+    },
+    {
+      "category": "Frontend",
+      "items": ["React.js", "Next.js", "Redux", "JavaScript"]
+    },
+    {
+      "category": "Mobile & Reports",
+      "items": ["Flutter", "Crystal Report", "Mobile Apps", "PDF Generation"]
+    },
+    {
+      "category": "Databases",
+      "items": ["PostgreSQL", "MySQL", "Redis", "Liquibase"]
+    },
+    {
+      "category": "DevOps",
+      "items": ["Docker", "Kubernetes", "GitHub Actions", "Linux/Unix"]
+    }
+  ]
+}

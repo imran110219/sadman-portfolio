@@ -1,0 +1,43 @@
+{
+  "services": [
+    {
+      "icon": "Zap",
+      "title": "Full-Stack Development",
+      "description": "End-to-end web application development with modern tech stack",
+      "price": "From $10k"
+    },
+    {
+      "icon": "TrendingUp",
+      "title": "System Architecture",
+      "description": "Scalable infrastructure design and technical consulting",
+      "price": "From $5k"
+    },
+    {
+      "icon": "Users",
+      "title": "Team Augmentation",
+      "description": "Embedded engineering support for your existing team",
+      "price": "From $8k/mo"
+    }
+  ],
+  "caseStudies": [
+    {
+      "client": "FinTech Startup",
+      "project": "Payment Processing Platform",
+      "result": "10x transaction throughput, 99.99% uptime",
+      "metrics": ["500k+ users", "50M+ transactions", "3 months delivery"]
+    },
+    {
+      "client": "E-Learning Company",
+      "project": "Interactive Learning Platform",
+      "result": "Reduced load time by 70%, increased engagement by 45%",
+      "metrics": ["100k+ students", "95% satisfaction", "4 months delivery"]
+    },
+    {
+      "client": "Healthcare SaaS",
+      "project": "Patient Management System",
+      "result": "HIPAA compliant, streamlined workflows",
+      "metrics": ["50+ clinics", "200k+ patients", "6 months delivery"]
+    }
+  ],
+  "workProcess": ["Discovery", "Design", "Development", "Delivery"]
+}

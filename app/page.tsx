@@ -14,11 +14,13 @@ import { DeveloperView } from "@/components/developer-view";
 import { ClientView } from "@/components/client-view";
 import { Footer } from "@/components/footer";
 import { trackViewChange } from "@/lib/analytics";
+import { getProfile } from "@/lib/data";
 
 type ViewType = "recruiter" | "developer" | "client" | null;
 
 export default function Home() {
   const [activeView, setActiveView] = useState<ViewType>(null);
+  const profile = getProfile();
 
   const handleViewChange = (view: ViewType) => {
     setActiveView(view);
@@ -57,13 +59,13 @@ export default function Home() {
               </div>
 
               <h1 className="text-6xl md:text-8xl font-bold mb-6 text-balance">
-                Sadman
+                {profile.name}
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-4 text-balance">
-                Senior Software Engineer
+                {profile.title}
               </p>
               <p className="text-lg md:text-xl text-muted-foreground text-balance mb-6">
-                Building scalable systems & digital products
+                {profile.tagline}
               </p>
               <DownloadCVButton variant="outline" size="lg" />
             </motion.div>

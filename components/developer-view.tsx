@@ -4,66 +4,11 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Star } from "lucide-react";
-
-const projects = [
-  {
-    title: "Open Care",
-    description:
-      "Scalable health-tech platform connecting patients, doctors, and organizations in Bangladesh. Comprehensive healthcare management system.",
-    tech: ["Java", "Spring Boot", "React.js", "PostgreSQL", "REST APIs"],
-    stars: 456,
-    link: "#",
-  },
-  {
-    title: "Exam Management System",
-    description:
-      "Java-based system serving 30,000+ students with real-time dashboards, Crystal Reports, and optimized performance using Redis.",
-    tech: ["Java", "Spring Boot", "PostgreSQL", "Flutter", "Crystal Report"],
-    stars: 312,
-    link: "#",
-  },
-  {
-    title: "National Electronic Government Procurement System (e-GP)",
-    description:
-      "Large-scale government procurement platform with secure file handling, advanced data modeling, and integrity features for transparent procurement processes.",
-    tech: ["Java", "Spring Boot", "PostgreSQL", "JavaScript", "Security"],
-    stars: 523,
-    link: "#",
-  },
-  {
-    title: "Keycloak Authentication Service",
-    description:
-      "Enterprise-grade authentication and authorization system with Keycloak integration for secure, scalable user management.",
-    tech: ["Spring Boot", "Keycloak", "REST APIs", "PostgreSQL"],
-    stars: 189,
-    link: "#",
-  },
-];
-
-const techStack = [
-  {
-    category: "Backend",
-    items: ["Java", "Spring Boot", "Hibernate", "REST APIs"],
-  },
-  {
-    category: "Frontend",
-    items: ["React.js", "Next.js", "Redux", "JavaScript"],
-  },
-  {
-    category: "Mobile & Reports",
-    items: ["Flutter", "Crystal Report", "Mobile Apps", "PDF Generation"],
-  },
-  {
-    category: "Databases",
-    items: ["PostgreSQL", "MySQL", "Redis", "Liquibase"],
-  },
-  {
-    category: "DevOps",
-    items: ["Docker", "Kubernetes", "GitHub Actions", "Linux/Unix"],
-  },
-];
+import { getProjects, getTechStack } from "@/lib/data";
 
 export function DeveloperView() {
+  const projects = getProjects(true); // Get featured projects
+  const techStack = getTechStack();
   return (
     <div className="max-w-6xl mx-auto space-y-12">
       <motion.div

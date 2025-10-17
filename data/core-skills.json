@@ -1,0 +1,24 @@
+{
+  "categories": [
+    {
+      "title": "Backend",
+      "emoji": "💻",
+      "skills": ["Java, Spring Boot", "Hibernate, Liquibase", "REST APIs"]
+    },
+    {
+      "title": "Frontend",
+      "emoji": "🎨",
+      "skills": ["React.js, Next.js", "Redux, JavaScript", "TypeScript"]
+    },
+    {
+      "title": "Databases",
+      "emoji": "🗄️",
+      "skills": ["PostgreSQL, MySQL", "Redis", "Database Design"]
+    },
+    {
+      "title": "DevOps",
+      "emoji": "🚀",
+      "skills": ["Docker, Kubernetes", "GitHub Actions", "Linux/Unix"]
+    }
+  ]
+}
