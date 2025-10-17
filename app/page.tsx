@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Target, Code2, Rocket } from "lucide-react";
+import { Target, Code2, Rocket, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Navigation } from "@/components/navigation";
 import { DownloadCVButton } from "@/components/download-cv-button";
 import { ProfileAvatar } from "@/components/profile-avatar";
 import { LiveMetrics } from "@/components/live-metrics";
+import { FloatingContactButton } from "@/components/floating-contact-button";
 import { RecruiterView } from "@/components/recruiter-view";
 import { DeveloperView } from "@/components/developer-view";
 import { ClientView } from "@/components/client-view";
@@ -16,7 +17,7 @@ import { Footer } from "@/components/footer";
 import { trackViewChange } from "@/lib/analytics";
 import { getProfile } from "@/lib/data";
 
-type ViewType = "recruiter" | "developer" | "client" | null;
+type ViewType = "recruiter" | "developer" | "client" | "all" | null;
 
 export default function Home() {
   const [activeView, setActiveView] = useState<ViewType>(null);
@@ -31,11 +32,17 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Theme Toggle */}
-      <ThemeToggle />
+      {/* Navigation */}
+      <Navigation
+        activeView={activeView}
+        onHomeClick={() => handleViewChange(null)}
+      />
 
       {/* Live Metrics Widget */}
       <LiveMetrics />
+
+      {/* Floating Contact Button */}
+      <FloatingContactButton />
 
       {/* Hero Section */}
       <AnimatePresence mode="wait">
@@ -64,10 +71,26 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-muted-foreground mb-4 text-balance">
                 {profile.title}
               </p>
-              <p className="text-lg md:text-xl text-muted-foreground text-balance mb-6">
+              <p className="text-lg md:text-xl text-primary font-semibold text-balance mb-2">
                 {profile.tagline}
               </p>
-              <DownloadCVButton variant="outline" size="lg" />
+              {profile.valueProposition && (
+                <p className="text-base md:text-lg text-muted-foreground text-balance mb-6 max-w-2xl mx-auto">
+                  {profile.valueProposition}
+                </p>
+              )}
+              <div className="flex flex-wrap gap-4 justify-center items-center">
+                <DownloadCVButton variant="default" size="lg" />
+                <Button
+                  variant="outline"
+                  size="lg"
+                  onClick={() => handleViewChange("all")}
+                  className="gap-2"
+                >
+                  <ArrowRight className="h-4 w-4" />
+                  Explore All
+                </Button>
+              </div>
             </motion.div>
 
             <motion.div
@@ -77,55 +100,64 @@ export default function Home() {
               className="w-full max-w-4xl"
             >
               <p className="text-center text-muted-foreground mb-8 text-lg">
-                Choose your path:
+                Choose your path or explore everything:
               </p>
               <div className="grid md:grid-cols-3 gap-6">
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02, y: -4 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <Card
-                    className="p-8 cursor-pointer hover:border-primary transition-colors bg-card"
+                    className="p-8 cursor-pointer hover:border-primary hover:shadow-lg transition-all bg-card group"
                     onClick={() => handleViewChange("recruiter")}
                   >
-                    <Target className="h-12 w-12 mb-4 text-primary" />
+                    <Target className="h-12 w-12 mb-4 text-primary group-hover:scale-110 transition-transform" />
                     <h3 className="text-2xl font-bold mb-2">I'm a Recruiter</h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground mb-3">
                       View skills, experience timeline, and download resume
                     </p>
-                  </Card>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <Card
-                    className="p-8 cursor-pointer hover:border-accent transition-colors bg-card"
-                    onClick={() => handleViewChange("developer")}
-                  >
-                    <Code2 className="h-12 w-12 mb-4 text-accent" />
-                    <h3 className="text-2xl font-bold mb-2">I'm a Developer</h3>
-                    <p className="text-muted-foreground">
-                      Explore projects, tech stack, and code examples
+                    <p className="text-xs text-primary font-semibold">
+                      → Skills • Experience • Achievements
                     </p>
                   </Card>
                 </motion.div>
 
                 <motion.div
-                  whileHover={{ scale: 1.02 }}
+                  whileHover={{ scale: 1.02, y: -4 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <Card
-                    className="p-8 cursor-pointer hover:border-chart-3 transition-colors bg-card"
+                    className="p-8 cursor-pointer hover:border-accent hover:shadow-lg transition-all bg-card group"
+                    onClick={() => handleViewChange("developer")}
+                  >
+                    <Code2 className="h-12 w-12 mb-4 text-accent group-hover:scale-110 transition-transform" />
+                    <h3 className="text-2xl font-bold mb-2">I'm a Developer</h3>
+                    <p className="text-muted-foreground mb-3">
+                      Explore projects, tech stack, and code examples
+                    </p>
+                    <p className="text-xs text-accent font-semibold">
+                      → Projects • Tech Stack • Architecture
+                    </p>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  whileHover={{ scale: 1.02, y: -4 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <Card
+                    className="p-8 cursor-pointer hover:border-chart-3 hover:shadow-lg transition-all bg-card group"
                     onClick={() => handleViewChange("client")}
                   >
-                    <Rocket className="h-12 w-12 mb-4 text-chart-3" />
+                    <Rocket className="h-12 w-12 mb-4 text-chart-3 group-hover:scale-110 transition-transform" />
                     <h3 className="text-2xl font-bold mb-2">
                       I'm a Client/Founder
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-muted-foreground mb-3">
                       See products, services, and case studies
+                    </p>
+                    <p className="text-xs text-chart-3 font-semibold">
+                      → Services • Case Studies • Process
                     </p>
                   </Card>
                 </motion.div>
@@ -140,17 +172,41 @@ export default function Home() {
             exit={{ opacity: 0, y: -20 }}
             className="container mx-auto px-4 py-20 min-h-screen"
           >
-            <Button
-              variant="ghost"
-              onClick={() => handleViewChange(null)}
-              className="mb-8"
-            >
-              ← Back to Home
-            </Button>
+            <div className="pt-16">
+              <Button
+                variant="ghost"
+                onClick={() => handleViewChange(null)}
+                className="mb-8"
+              >
+                ← Back to Home
+              </Button>
 
-            {activeView === "recruiter" && <RecruiterView />}
-            {activeView === "developer" && <DeveloperView />}
-            {activeView === "client" && <ClientView />}
+              {activeView === "recruiter" && <RecruiterView />}
+              {activeView === "developer" && <DeveloperView />}
+              {activeView === "client" && <ClientView />}
+              {activeView === "all" && (
+                <div className="space-y-16">
+                  <section id="recruiter-section">
+                    <h2 className="text-3xl font-bold mb-8">
+                      Professional Overview
+                    </h2>
+                    <RecruiterView />
+                  </section>
+                  <section id="developer-section">
+                    <h2 className="text-3xl font-bold mb-8">
+                      Projects & Technical Work
+                    </h2>
+                    <DeveloperView />
+                  </section>
+                  <section id="client-section">
+                    <h2 className="text-3xl font-bold mb-8">
+                      Services & Case Studies
+                    </h2>
+                    <ClientView />
+                  </section>
+                </div>
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

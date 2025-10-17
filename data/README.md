@@ -4,7 +4,7 @@ This directory contains all the data for your portfolio website. Simply edit the
 
 ## 📁 Files Overview
 
-### `profile.json`
+### `profile.json` ✨ UPDATED
 
 Your personal information and social links.
 
@@ -12,17 +12,31 @@ Your personal information and social links.
 
 - `name`: Your full name
 - `title`: Your job title/role
-- `tagline`: A short description of what you do
+- `tagline`: A short, powerful description of what you do
+- `valueProposition`: ✨ NEW - Expanded value statement
 - `bio`: A longer biography (optional)
 - `location`: Your location (optional)
 - `avatar`: Path to your profile image (optional)
+- `availability`: ✨ NEW - Current availability status
 - `social`: Object containing your social media links
   - `email`: Your email address
   - `github`: GitHub profile URL
-  - `linkedin`: LinkedIn profile URL (optional)
+  - `linkedin`: ✨ LinkedIn profile URL (recommended to add)
   - `twitter`: Twitter profile URL (optional)
   - `medium`: Medium profile URL (optional)
   - `hackerrank`: HackerRank profile URL (optional)
+
+**Example:**
+
+```json
+{
+  "name": "Sadman",
+  "title": "Senior Software Engineer",
+  "tagline": "I build resilient backend systems that scale",
+  "valueProposition": "Transforming complex business challenges into elegant, high-performance solutions",
+  "availability": "Available for opportunities"
+}
+```
 
 ### `skills.json`
 
@@ -104,6 +118,94 @@ Services you offer, case studies, and work process (for Client View).
   - `metrics`: Array of key metrics
 - `workProcess`: Array of work process steps (e.g., ["Discovery", "Design", "Development", "Delivery"])
 
+### `testimonials.json` ✨ NEW
+
+Client and colleague testimonials for social proof.
+
+**Structure:**
+
+- `testimonials`: Array of testimonials
+  - `id`: Unique identifier
+  - `name`: Person's full name
+  - `role`: Their job title
+  - `company`: Company name
+  - `avatar`: Path to profile image (optional)
+  - `quote`: The testimonial text (keep to 1-2 sentences)
+  - `linkedin`: LinkedIn profile URL (optional but recommended)
+  - `featured`: Boolean - show on main pages
+
+**Example:**
+
+```json
+{
+  "id": "1",
+  "name": "John Smith",
+  "role": "Engineering Manager",
+  "company": "Tech Corp",
+  "quote": "Sadman's technical expertise is exceptional.",
+  "linkedin": "https://linkedin.com/in/johnsmith",
+  "featured": true
+}
+```
+
+### `detailed-projects.json` ✨ NEW
+
+Comprehensive project case studies with detailed information.
+
+**Structure:**
+
+Each project includes:
+
+- `title`: Project name
+- `tagline`: One-line summary
+- `featured`: Boolean
+- `problem`: Problem statement
+- `context`: Business context
+- `role`: Your role
+- `contributions`: Array of your contributions
+- `teamSize`: Number (optional)
+- `duration`: String like "12 months" (optional)
+- `tech`: Array of technologies
+- `architecture`: Architecture description (optional)
+- `architectureDiagram`: Path to diagram image (optional)
+- `challenges`: Array of challenge/solution pairs
+- `metrics`: Array of impact metrics
+- `lessons`: Array of lessons learned
+- `links`: Object with live/github/demo URLs
+- `screenshots`: Array of screenshot paths (optional)
+
+**Example:**
+
+```json
+{
+  "title": "E-Commerce Platform",
+  "tagline": "Scalable multi-tenant e-commerce solution",
+  "featured": true,
+  "problem": "Small businesses lacked affordable e-commerce platforms",
+  "context": "Built for 500+ small businesses",
+  "role": "Lead Backend Developer",
+  "contributions": [
+    "Architected microservices backend",
+    "Implemented payment gateway integration"
+  ],
+  "tech": ["Java", "Spring Boot", "React"],
+  "challenges": [
+    {
+      "challenge": "Handling payment security",
+      "solution": "Implemented PCI-DSS compliant architecture"
+    }
+  ],
+  "metrics": [
+    {
+      "label": "Businesses",
+      "value": "500+",
+      "description": "Active merchants"
+    }
+  ],
+  "lessons": ["Security must be built-in from the start"]
+}
+```
+
 ## 🚀 How to Update Your Portfolio
 
 1. **Edit the JSON files** in this directory with your information
@@ -118,12 +220,17 @@ Services you offer, case studies, and work process (for Client View).
 - Ensure all URLs include `http://` or `https://`
 - Skills levels should be realistic (0-100)
 - Mark your best projects as `"featured": true`
+- For testimonials, get written permission before publishing
+- Use metrics that demonstrate real impact (numbers, percentages)
+- Keep testimonial quotes short (1-2 sentences max)
 
 ## ⚠️ Important
 
 - Maintain the JSON structure - don't change field names
 - Ensure valid JSON syntax (use a JSON validator if needed)
 - Keep emoji characters in the `core-skills.json` file for visual appeal
+- Replace placeholder testimonials with real ones before launch
+- Add actual images to `/public/` folder and reference correct paths
 
 ## 🎨 Customization Examples
 
@@ -148,6 +255,37 @@ Services you offer, case studies, and work process (for Client View).
   "demo": "https://project.demo.com",
   "featured": true
 }
+```
+
+### Adding a New Testimonial
+
+```json
+{
+  "id": "4",
+  "name": "Sarah Johnson",
+  "role": "CTO",
+  "company": "StartupXYZ",
+  "quote": "Best engineer I've worked with. Delivered ahead of schedule.",
+  "linkedin": "https://linkedin.com/in/sarahjohnson",
+  "featured": true
+}
+```
+
+## 📸 Adding Images
+
+Place images in `/public/` folder:
+
+- Profile photo: `/public/profile.jpg`
+- Project screenshots: `/public/projects/[project-name]/screenshot-1.png`
+- Architecture diagrams: `/public/projects/[project-name]/architecture.png`
+- Testimonial avatars: `/public/testimonials/[name].jpg`
+- OG image: `/public/og-image.jpg` (1200x630px for social sharing)
+
+Then reference them in JSON:
+
+```json
+"avatar": "/profile.jpg",
+"architectureDiagram": "/projects/open-care/architecture.png"
 ```
 
 ### Adding Work Experience

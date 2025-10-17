@@ -1,14 +1,17 @@
 {
   "name": "Sadman",
   "title": "Senior Software Engineer",
-  "tagline": "Building scalable systems & digital products",
+  "tagline": "I build resilient backend systems that scale",
+  "valueProposition": "Transforming complex business challenges into elegant, high-performance solutions",
   "bio": "Passionate about creating robust, scalable enterprise solutions with 9+ years of experience in full-stack development.",
   "location": "Bangladesh",
   "avatar": "/profile.jpg",
   "social": {
     "email": "imran110219@gmail.com",
     "github": "https://github.com/imran110219",
+    "linkedin": "https://linkedin.com/in/sadman-sobhan",
     "medium": "https://medium.com/@imran110219",
     "hackerrank": "https://www.hackerrank.com/profile/imran110219"
-  }
+  },
+  "availability": "Available for opportunities"
 }

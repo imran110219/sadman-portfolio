@@ -1,0 +1,35 @@
+{
+  "testimonials": [
+    {
+      "id": "1",
+      "name": "John Smith",
+      "role": "Engineering Manager",
+      "company": "Tech Corp",
+      "avatar": "/testimonials/placeholder-1.jpg",
+      "quote": "Sadman's technical expertise and problem-solving abilities are exceptional. He consistently delivers high-quality solutions.",
+      "linkedin": "https://linkedin.com/in/example",
+      "featured": true
+    },
+    {
+      "id": "2",
+      "name": "Sarah Johnson",
+      "role": "Product Lead",
+      "company": "Digital Solutions Inc",
+      "avatar": "/testimonials/placeholder-2.jpg",
+      "quote": "Working with Sadman was a game-changer for our project. His attention to detail and scalability mindset are outstanding.",
+      "linkedin": "https://linkedin.com/in/example",
+      "featured": true
+    },
+    {
+      "id": "3",
+      "name": "Michael Chen",
+      "role": "CTO",
+      "company": "Innovation Labs",
+      "avatar": "/testimonials/placeholder-3.jpg",
+      "quote": "Sadman brings both technical excellence and strong communication skills. A true asset to any engineering team.",
+      "linkedin": "https://linkedin.com/in/example",
+      "featured": true
+    }
+  ],
+  "_note": "Replace placeholder data with actual testimonials from colleagues, supervisors, or clients. Ensure you have permission to use their names and quotes."
+}

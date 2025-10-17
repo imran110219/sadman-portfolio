@@ -5,6 +5,7 @@ import projectsData from "@/data/projects.json";
 import experienceData from "@/data/experience.json";
 import achievementsData from "@/data/achievements.json";
 import servicesData from "@/data/services.json";
+import testimonialsData from "@/data/testimonials.json";
 
 import type {
   Profile,
@@ -82,4 +83,15 @@ export const getRecruiterSkills = () => {
  */
 export const getTechStack = () => {
   return (skillsData as SkillsData).techStack;
+};
+
+/**
+ * Get testimonials
+ * @param featuredOnly - If true, returns only featured testimonials
+ */
+export const getTestimonials = (featuredOnly = false) => {
+  const data = testimonialsData as { testimonials: any[] };
+  return featuredOnly
+    ? data.testimonials.filter((t) => t.featured)
+    : data.testimonials;
 };

@@ -1,0 +1,242 @@
+{
+  "detailedProjects": [
+    {
+      "title": "Open Care",
+      "tagline": "Comprehensive healthcare management platform for Bangladesh",
+      "featured": true,
+      "problem": "Healthcare providers in Bangladesh lacked a unified digital platform to manage patient records, appointments, and medical services efficiently, leading to fragmented care delivery.",
+      "context": "Developed for a consortium of healthcare organizations serving 100,000+ patients across multiple facilities. Required HIPAA-compliant data handling and multi-tenant architecture.",
+      "role": "Senior Backend Engineer",
+      "contributions": [
+        "Architected scalable microservices backend handling 50K+ daily transactions",
+        "Implemented secure patient data management with end-to-end encryption",
+        "Built RESTful APIs for appointment scheduling, medical records, and billing",
+        "Integrated third-party payment gateways and SMS notification services",
+        "Optimized database queries reducing average response time by 60%"
+      ],
+      "teamSize": 8,
+      "duration": "12 months",
+      "tech": ["Java", "Spring Boot", "React.js", "PostgreSQL", "Docker", "AWS", "Redis"],
+      "architecture": "Microservices architecture with API Gateway, separate services for Patient Management, Appointments, Billing, and Analytics. Used event-driven communication via RabbitMQ for asynchronous operations.",
+      "challenges": [
+        {
+          "challenge": "Handling concurrent appointment bookings without conflicts across multiple facilities",
+          "solution": "Implemented pessimistic locking with Redis-based distributed locks and real-time slot availability updates"
+        },
+        {
+          "challenge": "Ensuring HIPAA compliance for sensitive patient data",
+          "solution": "Applied AES-256 encryption at rest, TLS for data in transit, comprehensive audit logging, and role-based access control (RBAC)"
+        },
+        {
+          "challenge": "System performance degradation during peak hours (9 AM - 12 PM)",
+          "solution": "Introduced Redis caching for frequently accessed data, database query optimization, and horizontal scaling with load balancing"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Users Served",
+          "value": "100K+",
+          "description": "Active patients using the platform"
+        },
+        {
+          "label": "Response Time",
+          "value": "-60%",
+          "description": "Average API response time reduction"
+        },
+        {
+          "label": "Daily Transactions",
+          "value": "50K+",
+          "description": "Appointments, records, payments"
+        }
+      ],
+      "lessons": [
+        "Importance of distributed locking in concurrent systems to prevent race conditions",
+        "Health data compliance requires security-first architecture from day one",
+        "Caching strategies significantly improve user experience during peak loads",
+        "Comprehensive monitoring and alerting are critical for healthcare applications"
+      ],
+      "links": {
+        "live": "#"
+      }
+    },
+    {
+      "title": "National e-GP System",
+      "tagline": "Large-scale government procurement platform for transparent bidding",
+      "featured": true,
+      "problem": "Bangladesh government procurement process was manual, opaque, and prone to inefficiencies and corruption, affecting billions of dollars in public spending.",
+      "context": "National-level e-governance initiative handling thousands of government tenders annually. Required highest levels of security, transparency, and audit trails.",
+      "role": "Lead Java Developer",
+      "contributions": [
+        "Designed and implemented secure bidding workflow engine with multi-stage approvals",
+        "Built tamper-proof document management system with digital signatures",
+        "Created comprehensive audit logging system tracking all user actions",
+        "Developed advanced search and filtering for procurement opportunities",
+        "Implemented role-based access control for different stakeholder types"
+      ],
+      "teamSize": 15,
+      "duration": "18 months",
+      "tech": ["Java", "Spring Boot", "PostgreSQL", "JavaScript", "PKI", "Digital Signatures"],
+      "architecture": "Monolithic architecture with modular design. Separate modules for Tender Management, Bidding, Evaluation, Contract Management, and Audit. Used PostgreSQL with complex table partitioning for performance.",
+      "challenges": [
+        {
+          "challenge": "Ensuring absolute integrity of bid documents and preventing tampering",
+          "solution": "Implemented PKI-based digital signatures, document hashing with SHA-256, and immutable audit trails stored in append-only logs"
+        },
+        {
+          "challenge": "Managing complex multi-stage approval workflows with different authority levels",
+          "solution": "Built flexible workflow engine using state machines, supporting parallel and sequential approvals with configurable routing rules"
+        },
+        {
+          "challenge": "Handling large file uploads (100MB+) for technical documents",
+          "solution": "Implemented chunked upload with resume capability, virus scanning integration, and S3-compatible object storage"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Tenders Processed",
+          "value": "10K+",
+          "description": "Annual procurement tenders"
+        },
+        {
+          "label": "Cost Savings",
+          "value": "15%",
+          "description": "Reduction in procurement costs"
+        },
+        {
+          "label": "Process Time",
+          "value": "-40%",
+          "description": "Faster tender evaluation"
+        }
+      ],
+      "lessons": [
+        "Government systems require extensive audit trails and compliance features",
+        "Security and integrity are paramount when handling sensitive procurement data",
+        "Complex workflows need flexible, configurable engines to adapt to policy changes",
+        "Performance optimization is crucial when dealing with large document volumes"
+      ],
+      "links": {
+        "live": "#"
+      }
+    },
+    {
+      "title": "Exam Management System",
+      "tagline": "End-to-end digital examination platform for educational institutions",
+      "featured": true,
+      "problem": "Educational institutions were managing exams manually, leading to errors in grading, delayed result publication, and lack of analytics for student performance.",
+      "context": "Deployed for universities and colleges serving 30,000+ students. Required support for multiple exam types, automated grading, and comprehensive reporting.",
+      "role": "Full Stack Developer",
+      "contributions": [
+        "Built exam scheduling and seat allocation algorithms",
+        "Developed automated grading engine for objective questions",
+        "Created Crystal Reports integration for result cards and transcripts",
+        "Implemented Flutter mobile app for students to view results",
+        "Optimized database for fast result processing and report generation"
+      ],
+      "teamSize": 6,
+      "duration": "10 months",
+      "tech": ["Java", "Spring Boot", "PostgreSQL", "Flutter", "Crystal Reports", "Redis"],
+      "architecture": "Three-tier architecture with Spring Boot backend, Flutter mobile frontend, and PostgreSQL database. Redis used for caching exam questions and student data during high-traffic result publication.",
+      "challenges": [
+        {
+          "challenge": "Simultaneous result access by 30,000+ students causing server overload",
+          "solution": "Implemented Redis caching for result data, CDN for static assets, and staggered result publication by batch to distribute load"
+        },
+        {
+          "challenge": "Complex grade calculation with weighted components and normalization",
+          "solution": "Built configurable grading engine with support for multiple grading schemes, curve fitting, and what-if analysis"
+        },
+        {
+          "challenge": "Generating thousands of PDF result cards within minutes",
+          "solution": "Parallelized Crystal Reports generation using worker pools, pre-rendered templates, and asynchronous job processing"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Students Served",
+          "value": "30K+",
+          "description": "Concurrent active students"
+        },
+        {
+          "label": "Result Time",
+          "value": "-75%",
+          "description": "Faster result publication"
+        },
+        {
+          "label": "Error Rate",
+          "value": "-90%",
+          "description": "Reduction in grading errors"
+        }
+      ],
+      "lessons": [
+        "Caching strategy is essential for handling traffic spikes during result publication",
+        "Parallel processing significantly reduces batch operation time",
+        "Configurable business logic engines provide flexibility for different institutions",
+        "Mobile-first approach improves student engagement and accessibility"
+      ],
+      "links": {
+        "live": "#"
+      }
+    },
+    {
+      "title": "Keycloak Authentication Service",
+      "tagline": "Enterprise-grade SSO and identity management platform",
+      "featured": true,
+      "problem": "Organizations were managing user authentication separately for each application, leading to security vulnerabilities, poor user experience, and high maintenance overhead.",
+      "context": "Centralized authentication service for enterprise clients with multiple applications. Required SSO, SAML/OAuth2 support, and integration with existing LDAP/Active Directory.",
+      "role": "Backend Engineer",
+      "contributions": [
+        "Integrated Keycloak with Spring Boot applications using OAuth2/OIDC",
+        "Implemented custom user federation for legacy LDAP systems",
+        "Built role-based and attribute-based access control (RBAC/ABAC)",
+        "Created admin APIs for user and client management",
+        "Developed comprehensive security audit and monitoring dashboards"
+      ],
+      "teamSize": 4,
+      "duration": "6 months",
+      "tech": ["Spring Boot", "Keycloak", "PostgreSQL", "OAuth2", "SAML", "LDAP"],
+      "architecture": "Keycloak server as identity provider, Spring Security OAuth2 resource servers for applications. Used PostgreSQL for Keycloak persistence and Redis for session management.",
+      "challenges": [
+        {
+          "challenge": "Migrating 100K+ users from legacy authentication to Keycloak without disruption",
+          "solution": "Implemented phased migration with user federation, allowing gradual transition while maintaining backward compatibility"
+        },
+        {
+          "challenge": "Integrating with diverse client applications using different auth protocols",
+          "solution": "Configured Keycloak to support multiple protocols (OAuth2, SAML, LDAP) simultaneously with protocol mappers"
+        },
+        {
+          "challenge": "Managing complex permission hierarchies across applications",
+          "solution": "Designed flexible RBAC model with composite roles, group-based permissions, and fine-grained resource-level authorization"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Users Migrated",
+          "value": "100K+",
+          "description": "From legacy to Keycloak"
+        },
+        {
+          "label": "SSO Apps",
+          "value": "20+",
+          "description": "Integrated applications"
+        },
+        {
+          "label": "Auth Time",
+          "value": "<100ms",
+          "description": "Average token validation"
+        }
+      ],
+      "lessons": [
+        "Centralized authentication significantly improves security posture and user experience",
+        "User federation enables gradual migration without big-bang cutover",
+        "Flexible authorization models are crucial for accommodating diverse application needs",
+        "Monitoring and audit logging are essential for security compliance"
+      ],
+      "links": {
+        "live": "#",
+        "github": "#"
+      }
+    }
+  ],
+  "_note": "These detailed project case studies can be used in the Developer and Client views. Update links with actual URLs and add screenshots/diagrams in the public folder."
+}

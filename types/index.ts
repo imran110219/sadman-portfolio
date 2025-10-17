@@ -13,9 +13,11 @@ export interface Profile {
   name: string;
   title: string;
   tagline: string;
+  valueProposition?: string;
   bio?: string;
   location?: string;
   avatar?: string;
+  availability?: string;
   social: SocialLinks;
 }
 
