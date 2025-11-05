@@ -16,9 +16,12 @@ export function DeveloperView() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-bold mb-4">Projects & Code</h2>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          Projects & Architecture
+        </h2>
         <p className="text-xl text-muted-foreground">
-          Building with modern technologies and best practices
+          I build scalable systems that unite strong backend engineering with
+          modern DevSecOps.
         </p>
       </motion.div>
 
@@ -119,46 +122,6 @@ export function DeveloperView() {
             </motion.div>
           ))}
         </div>
-      </motion.section>
-
-      {/* Code Example */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-      >
-        <h3 className="text-2xl font-bold mb-6">Code Sample</h3>
-        <Card className="p-6 bg-card">
-          <pre className="text-sm overflow-x-auto">
-            <code className="text-muted-foreground font-mono">
-              {`// Custom React hook for data fetching with caching
-import { useState, useEffect } from 'react'
-
-export function useFetch<T>(url: string) {
-  const [data, setData] = useState<T | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<Error | null>(null)
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(url)
-        const json = await response.json()
-        setData(json)
-      } catch (err) {
-        setError(err as Error)
-      } finally {
-        setLoading(false)
-      }
-    }
-    fetchData()
-  }, [url])
-
-  return { data, loading, error }
-}`}
-            </code>
-          </pre>
-        </Card>
       </motion.section>
     </div>
   );

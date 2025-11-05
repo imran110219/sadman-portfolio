@@ -3,22 +3,27 @@
     {
       "title": "Backend",
       "emoji": "💻",
-      "skills": ["Java, Spring Boot", "Hibernate, Liquibase", "REST APIs"]
+      "skills": ["Java, Spring Boot", "Hibernate, JPA, Liquibase", "REST/gRPC APIs", "Microservices Architecture"]
     },
     {
       "title": "Frontend",
       "emoji": "🎨",
-      "skills": ["React.js, Next.js", "Redux, JavaScript", "TypeScript"]
+      "skills": ["React.js, Next.js", "TypeScript, JavaScript", "TailwindCSS", "Redux, State Management"]
     },
     {
       "title": "Databases",
       "emoji": "🗄️",
-      "skills": ["PostgreSQL, MySQL", "Redis", "Database Design"]
+      "skills": ["PostgreSQL, MySQL", "Redis Caching", "Database Design", "Multi-Tenant Architecture"]
     },
     {
-      "title": "DevOps",
+      "title": "DevSecOps",
       "emoji": "🚀",
-      "skills": ["Docker, Kubernetes", "GitHub Actions", "Linux/Unix"]
+      "skills": ["Docker, Kubernetes", "GitHub Actions, CI/CD", "Terraform, IaC", "GCP, AWS", "Linux/Unix"]
+    },
+    {
+      "title": "Architecture",
+      "emoji": "🏗️",
+      "skills": ["Microservices Design", "Event-Driven Systems", "Multi-Tenant Systems", "SSO (Keycloak)", "System Scalability"]
     }
   ]
 }

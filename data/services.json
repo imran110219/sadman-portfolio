@@ -1,43 +1,57 @@
 {
   "services": [
     {
-      "icon": "Zap",
-      "title": "Full-Stack Development",
-      "description": "End-to-end web application development with modern tech stack",
-      "price": "From $10k"
-    },
-    {
       "icon": "TrendingUp",
-      "title": "System Architecture",
-      "description": "Scalable infrastructure design and technical consulting",
+      "title": "System Architecture & Scalability Consulting",
+      "description": "Designing resilient, multi-tenant, and cloud-native systems that grow with your business",
       "price": "From $5k"
     },
     {
-      "icon": "Users",
-      "title": "Team Augmentation",
-      "description": "Embedded engineering support for your existing team",
-      "price": "From $8k/mo"
+      "icon": "Code",
+      "title": "Backend Development (Spring Boot / Node.js)",
+      "description": "Building robust, maintainable APIs and distributed systems — optimized for performance and reliability",
+      "price": "From $8k"
+    },
+    {
+      "icon": "Cloud",
+      "title": "DevSecOps & Cloud Infrastructure",
+      "description": "Automating deployments, observability, and compliance with modern DevOps pipelines on GCP/AWS/Kubernetes",
+      "price": "From $6k"
+    },
+    {
+      "icon": "Layers",
+      "title": "Full-Stack Product Development",
+      "description": "End-to-end product design and engineering using React / Next.js + Spring Boot — from idea to deployment",
+      "price": "From $10k"
+    },
+    {
+      "icon": "Lightbulb",
+      "title": "Tech Advisory for Startups",
+      "description": "Helping early-stage founders validate ideas, design architecture, and plan technical execution",
+      "price": "From $2k"
     }
   ],
   "caseStudies": [
     {
-      "client": "FinTech Startup",
-      "project": "Payment Processing Platform",
-      "result": "10x transaction throughput, 99.99% uptime",
-      "metrics": ["500k+ users", "50M+ transactions", "3 months delivery"]
+      "client": "Open Care",
+      "project": "Healthcare Ecosystem Platform",
+      "result": "Built a nationwide healthcare ecosystem connecting patients, doctors, and hospitals with real-time data and scalability",
+      "metrics": ["10,000+ active users", "Multi-tenant microservices", "6 months delivery"],
+      "technologies": ["Spring Boot", "Next.js", "Keycloak", "Postgres", "Redis"]
     },
     {
-      "client": "E-Learning Company",
-      "project": "Interactive Learning Platform",
-      "result": "Reduced load time by 70%, increased engagement by 45%",
-      "metrics": ["100k+ students", "95% satisfaction", "4 months delivery"]
+      "client": "University",
+      "project": "University Management System",
+      "result": "Streamlined operations for 10k+ students, staff, and faculty across multiple campuses",
+      "metrics": ["20+ subsystems", "Stripe payments", "5 months delivery"],
+      "technologies": ["GCP", "CI/CD pipelines"]
     },
     {
-      "client": "Healthcare SaaS",
-      "project": "Patient Management System",
-      "result": "HIPAA compliant, streamlined workflows",
-      "metrics": ["50+ clinics", "200k+ patients", "6 months delivery"]
+      "client": "Diagnostic Center",
+      "project": "Diagnostic Center Management System",
+      "result": "Digitized patient data, test workflows, and doctor commissions in a cloud-connected system",
+      "metrics": ["5x faster onboarding", "Multi-role access", "3 months delivery"]
     }
   ],
-  "workProcess": ["Discovery", "Design", "Development", "Delivery"]
+  "workProcess": ["Discovery", "Architecture Design", "Development & Integration", "Launch & Optimize"]
 }

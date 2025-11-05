@@ -9,6 +9,14 @@
       "featured": true
     },
     {
+      "title": "Election Management System",
+      "description": "Robust system for managing elections, including candidate registration, center processing, and results tabulation.",
+      "tech": ["Java", "Spring Boot", "PostgreSQL", "JavaScript", "Security"],
+      "stars": 289,
+      "link": "#",
+      "featured": true
+    },
+    {
       "title": "Exam Management System",
       "description": "Java-based system serving 30,000+ students with real-time dashboards, Crystal Reports, and optimized performance using Redis.",
       "tech": ["Java", "Spring Boot", "PostgreSQL", "Flutter", "Crystal Report"],
@@ -21,14 +29,6 @@
       "description": "Large-scale government procurement platform with secure file handling, advanced data modeling, and integrity features for transparent procurement processes.",
       "tech": ["Java", "Spring Boot", "PostgreSQL", "JavaScript", "Security"],
       "stars": 523,
-      "link": "#",
-      "featured": true
-    },
-    {
-      "title": "Keycloak Authentication Service",
-      "description": "Enterprise-grade authentication and authorization system with Keycloak integration for secure, scalable user management.",
-      "tech": ["Spring Boot", "Keycloak", "REST APIs", "PostgreSQL"],
-      "stars": 189,
       "link": "#",
       "featured": true
     }

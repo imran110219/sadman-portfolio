@@ -3,14 +3,23 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, TrendingUp, Users, Zap } from "lucide-react";
+import {
+  TrendingUp,
+  Code,
+  Cloud,
+  Layers,
+  Lightbulb,
+  CheckCircle2,
+} from "lucide-react";
 import { getClientData } from "@/lib/data";
 
 // Icon mapping for services
 const iconMap = {
-  Zap,
-  TrendingUp,
-  Users,
+  TrendingUp: TrendingUp,
+  Code: Code,
+  Cloud: Cloud,
+  Layers: Layers,
+  Lightbulb: Lightbulb,
 };
 
 export function ClientView() {
@@ -26,7 +35,8 @@ export function ClientView() {
           Let's Build Together
         </h2>
         <p className="text-xl text-muted-foreground mb-8">
-          Transforming ideas into production-ready products
+          Turning complex business needs into scalable, secure, and intelligent
+          digital products
         </p>
         <Button size="lg" className="gap-2">
           Schedule a Call

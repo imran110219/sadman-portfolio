@@ -1,32 +1,78 @@
 {
   "recruiterSkills": [
-    { "name": "Java & Spring Boot", "level": 95 },
-    { "name": "React & Next.js", "level": 90 },
-    { "name": "PostgreSQL & MySQL", "level": 88 },
-    { "name": "Docker & Kubernetes", "level": 85 },
-    { "name": "REST APIs & Microservices", "level": 92 },
-    { "name": "Redis & Caching", "level": 82 }
+    { "name": "Java & Spring Boot (Microservices)", "level": 95 },
+    { "name": "System Architecture & Scalability Design", "level": 93 },
+    { "name": "DevSecOps (Docker, Kubernetes, CI/CD)", "level": 90 },
+    { "name": "React & Next.js (Full-Stack Integration)", "level": 85 },
+    { "name": "PostgreSQL, Redis & Data Modeling", "level": 88 },
+    { "name": "Cloud Infrastructure (GCP, AWS)", "level": 84 }
   ],
   "techStack": [
     {
-      "category": "Backend",
-      "items": ["Java", "Spring Boot", "Hibernate", "REST APIs"]
+      "category": "Backend & Architecture",
+      "items": [
+        "Java",
+        "Spring Boot",
+        "Spring Cloud",
+        "Hibernate/JPA",
+        "REST & gRPC APIs",
+        "Multi-Tenant Systems",
+        "Event-Driven Architecture"
+      ]
     },
     {
       "category": "Frontend",
-      "items": ["React.js", "Next.js", "Redux", "JavaScript"]
+      "items": [
+        "React.js",
+        "Next.js",
+        "TypeScript",
+        "Redux",
+        "TailwindCSS"
+      ]
     },
     {
-      "category": "Mobile & Reports",
-      "items": ["Flutter", "Crystal Report", "Mobile Apps", "PDF Generation"]
+      "category": "Databases & Caching",
+      "items": [
+        "PostgreSQL",
+        "MySQL",
+        "Redis",
+        "Liquibase",
+        "MongoDB"
+      ]
     },
     {
-      "category": "Databases",
-      "items": ["PostgreSQL", "MySQL", "Redis", "Liquibase"]
+      "category": "DevSecOps & Cloud",
+      "items": [
+        "Docker",
+        "Kubernetes",
+        "GitHub Actions",
+        "Jenkins",
+        "Terraform",
+        "Helm",
+        "Linux/Unix",
+        "Nginx",
+        "GCP",
+        "AWS"
+      ]
     },
     {
-      "category": "DevOps",
-      "items": ["Docker", "Kubernetes", "GitHub Actions", "Linux/Unix"]
+      "category": "Security & Identity",
+      "items": [
+        "Keycloak",
+        "SSO",
+        "Role-Based Access Control (RBAC)",
+        "Token-Based Authentication"
+      ]
+    },
+    {
+      "category": "Monitoring & Reliability",
+      "items": [
+        "Prometheus",
+        "Grafana",
+        "Log Management",
+        "Incident Response",
+        "Performance Tuning"
+      ]
     }
   ]
 }
