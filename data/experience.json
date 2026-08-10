@@ -3,20 +3,26 @@
     {
       "title": "Senior Software Engineer",
       "company": "Penta Global Ltd.",
-      "period": "2023 - Present",
-      "description": "Leading teams, architecting secure & scalable systems, and integrating Keycloak-based authentication solutions."
+      "period": "August 2023 – Present",
+      "description": "Lead backend engineering for an Election Management System across a 30-person team — task allocation, API contract design, nomination lifecycle and reporting service ownership, RabbitMQ integration, Keycloak-based authorization, and CI/CD deployment support on a self-managed Kubernetes data center."
     },
     {
       "title": "Software Engineer",
       "company": "Dynamic Solution Innovators Ltd.",
-      "period": "2022 - 2023",
-      "description": "Built an exam management system serving 30,000+ students, with real-time dashboards and optimized performance using Redis."
+      "period": "January 2022 – July 2023",
+      "description": "Led development of a production exam management system using Java, Spring Boot, and PostgreSQL. Reduced system response time by 30% via Redis caching. System served 2,500+ administrators, 1,000 exam invigilators, and supported registration for nearly 30,000 students."
     },
     {
-      "title": "Software Engineer",
+      "title": "Java Software Engineer",
       "company": "Dohatec New Media",
-      "period": "2016 - 2021",
-      "description": "Contributed to the National Electronic Government Procurement System, improving user engagement and ensuring data integrity."
+      "period": "October 2016 – December 2021",
+      "description": "Contributed to the National Electronic Government Procurement System — feature development, bug fixing, requirement analysis, large-file upload workflows, relational data modeling, and stakeholder-aligned delivery."
+    },
+    {
+      "title": ".NET Developer",
+      "company": "Jaliks Soft IT Limited",
+      "period": "February 2016 – June 2016",
+      "description": "Implemented features and resolved bugs in a large-scale education application using ASP.NET and C#. Maintained SQL Server databases including stored procedures, triggers, and views."
     }
   ]
 }

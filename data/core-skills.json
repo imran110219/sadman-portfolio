@@ -3,27 +3,27 @@
     {
       "title": "Backend",
       "emoji": "💻",
-      "skills": ["Java, Spring Boot", "Hibernate, JPA, Liquibase", "REST/gRPC APIs", "Microservices Architecture"]
+      "skills": ["Java, Spring Boot", "Hibernate, JPA, Liquibase", "REST APIs, RabbitMQ", "Microservices Architecture"]
     },
     {
       "title": "Frontend",
       "emoji": "🎨",
-      "skills": ["React.js, Next.js", "TypeScript, JavaScript", "TailwindCSS", "Redux, State Management"]
+      "skills": ["Next.js, TypeScript", "JavaScript", "TailwindCSS"]
     },
     {
       "title": "Databases",
       "emoji": "🗄️",
-      "skills": ["PostgreSQL, MySQL", "Redis Caching", "Database Design", "Multi-Tenant Architecture"]
+      "skills": ["PostgreSQL, SQL Server", "Redis Caching", "Relational Data Modeling", "Query Optimization"]
     },
     {
-      "title": "DevSecOps",
+      "title": "DevOps",
       "emoji": "🚀",
-      "skills": ["Docker, Kubernetes", "GitHub Actions, CI/CD", "Terraform, IaC", "GCP, AWS", "Linux/Unix"]
+      "skills": ["Docker, Kubernetes", "GitHub Actions, Jenkins", "Nginx, CI/CD", "Linux/Unix"]
     },
     {
-      "title": "Architecture",
-      "emoji": "🏗️",
-      "skills": ["Microservices Design", "Event-Driven Systems", "Multi-Tenant Systems", "SSO (Keycloak)", "System Scalability"]
+      "title": "Security & Leadership",
+      "emoji": "🔐",
+      "skills": ["Keycloak, SSO", "Role-Based Access Control", "Technical Leadership", "Agile Delivery"]
     }
   ]
 }

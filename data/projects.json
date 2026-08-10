@@ -1,35 +1,32 @@
 {
   "projects": [
     {
-      "title": "Open Care",
-      "description": "Scalable health-tech platform connecting patients, doctors, and organizations in Bangladesh. Comprehensive healthcare management system.",
-      "tech": ["Java", "Spring Boot", "React.js", "PostgreSQL", "REST APIs"],
-      "stars": 456,
-      "link": "#",
+      "title": "Open-Care",
+      "description": "Open-source healthcare-information platform with searchable doctor, hospital, ambulance, blood-donation, and medical-resource capabilities. Spring Boot REST API with PostgreSQL, Redis, Keycloak-based authorization, MinIO file storage, Liquibase migrations, and Swagger/OpenAPI documentation.",
+      "tech": ["Java", "Spring Boot", "PostgreSQL", "Redis", "Keycloak", "Docker", "Next.js"],
+      "link": "https://opencarebd.com/",
+      "github": "https://github.com/Cipher-Text/opencare",
+      "featured": true
+    },
+    {
+      "title": "FactLens",
+      "description": "Full-stack editorial platform for publishing and managing news and fact-focused content. Built and deployed the Next.js frontend, Strapi backend and content APIs, PostgreSQL database, and Cloudflare file storage.",
+      "tech": ["Next.js", "Strapi", "PostgreSQL", "Cloudflare"],
+      "link": "https://www.factlensbd.com/",
       "featured": true
     },
     {
       "title": "Election Management System",
-      "description": "Robust system for managing elections, including candidate registration, center processing, and results tabulation.",
-      "tech": ["Java", "Spring Boot", "PostgreSQL", "JavaScript", "Security"],
-      "stars": 289,
-      "link": "#",
+      "description": "Backend delivery for a distributed Election Management System comprising nearly 25 services. Responsible for API contracts, nomination lifecycle and payment-linked workflows, a reporting service generating official PDF reports, RabbitMQ integration, and Keycloak-based authorization across sensitive election data.",
+      "tech": ["Java", "Spring Boot", "Hibernate", "RabbitMQ", "Keycloak", "Docker", "Kubernetes"],
+      "link": null,
       "featured": true
     },
     {
       "title": "Exam Management System",
-      "description": "Java-based system serving 30,000+ students with real-time dashboards, Crystal Reports, and optimized performance using Redis.",
-      "tech": ["Java", "Spring Boot", "PostgreSQL", "Flutter", "Crystal Report"],
-      "stars": 312,
-      "link": "#",
-      "featured": true
-    },
-    {
-      "title": "National Electronic Government Procurement System (e-GP)",
-      "description": "Large-scale government procurement platform with secure file handling, advanced data modeling, and integrity features for transparent procurement processes.",
-      "tech": ["Java", "Spring Boot", "PostgreSQL", "JavaScript", "Security"],
-      "stars": 523,
-      "link": "#",
+      "description": "Led development of a production exam management system supporting 2,500+ administrators, 1,000 exam invigilators, and registration for nearly 30,000 students. Reduced response time by 30% with Redis caching. Includes Crystal Reports integration and a Flutter mobile interface.",
+      "tech": ["Java", "Spring Boot", "PostgreSQL", "Redis", "Flutter", "Crystal Reports"],
+      "link": null,
       "featured": true
     }
   ]

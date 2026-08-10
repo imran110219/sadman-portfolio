@@ -1,242 +1,189 @@
 {
   "detailedProjects": [
     {
-      "title": "Open Care",
-      "tagline": "Comprehensive healthcare management platform for Bangladesh",
+      "title": "Open-Care",
+      "tagline": "Open-source healthcare-information platform for Bangladesh",
       "featured": true,
-      "problem": "Healthcare providers in Bangladesh lacked a unified digital platform to manage patient records, appointments, and medical services efficiently, leading to fragmented care delivery.",
-      "context": "Developed for a consortium of healthcare organizations serving 100,000+ patients across multiple facilities. Required HIPAA-compliant data handling and multi-tenant architecture.",
-      "role": "Senior Backend Engineer",
+      "problem": "Healthcare information in Bangladesh was fragmented — finding doctors, hospitals, ambulance services, and blood donation resources required navigating multiple disconnected sources.",
+      "context": "Personal open-source project. Designed to make healthcare information searchable and accessible in one place.",
+      "role": "Lead contributor — backend architecture, API design, authorization, and deployment.",
       "contributions": [
-        "Architected scalable microservices backend handling 50K+ daily transactions",
-        "Implemented secure patient data management with end-to-end encryption",
-        "Built RESTful APIs for appointment scheduling, medical records, and billing",
-        "Integrated third-party payment gateways and SMS notification services",
-        "Optimized database queries reducing average response time by 60%"
+        "Built a Spring Boot REST API with PostgreSQL, Redis, and Keycloak-based authorization",
+        "Integrated MinIO for file storage and Liquibase for database migrations",
+        "Documented the API with Swagger/OpenAPI for developer discoverability",
+        "Containerized the application with Docker and deployed to production",
+        "Developed the Next.js frontend interface"
       ],
-      "teamSize": 8,
-      "duration": "12 months",
-      "tech": ["Java", "Spring Boot", "React.js", "PostgreSQL", "Docker", "AWS", "Redis"],
-      "architecture": "Microservices architecture with API Gateway, separate services for Patient Management, Appointments, Billing, and Analytics. Used event-driven communication via RabbitMQ for asynchronous operations.",
+      "teamSize": null,
+      "duration": "Ongoing",
+      "tech": ["Java", "Spring Boot", "PostgreSQL", "Redis", "Keycloak", "MinIO", "Docker", "Next.js", "Liquibase"],
+      "architecture": "Spring Boot REST API backed by PostgreSQL with Keycloak-based RBAC, MinIO file storage, Liquibase migrations, and a Next.js frontend. Containerized with Docker.",
       "challenges": [
         {
-          "challenge": "Handling concurrent appointment bookings without conflicts across multiple facilities",
-          "solution": "Implemented pessimistic locking with Redis-based distributed locks and real-time slot availability updates"
+          "challenge": "Designing an authorization model flexible enough for multiple user types (patients, doctors, organizations)",
+          "solution": "Used Keycloak with role-based access control and token introspection to enforce access rules across all API routes"
         },
         {
-          "challenge": "Ensuring HIPAA compliance for sensitive patient data",
-          "solution": "Applied AES-256 encryption at rest, TLS for data in transit, comprehensive audit logging, and role-based access control (RBAC)"
-        },
-        {
-          "challenge": "System performance degradation during peak hours (9 AM - 12 PM)",
-          "solution": "Introduced Redis caching for frequently accessed data, database query optimization, and horizontal scaling with load balancing"
+          "challenge": "Making healthcare resource data searchable and consistently structured across many provider types",
+          "solution": "Designed a normalized PostgreSQL schema with clear provider-type boundaries and Redis caching for frequently accessed directory data"
         }
       ],
-      "metrics": [
-        {
-          "label": "Users Served",
-          "value": "100K+",
-          "description": "Active patients using the platform"
-        },
-        {
-          "label": "Response Time",
-          "value": "-60%",
-          "description": "Average API response time reduction"
-        },
-        {
-          "label": "Daily Transactions",
-          "value": "50K+",
-          "description": "Appointments, records, payments"
-        }
-      ],
+      "metrics": [],
       "lessons": [
-        "Importance of distributed locking in concurrent systems to prevent race conditions",
-        "Health data compliance requires security-first architecture from day one",
-        "Caching strategies significantly improve user experience during peak loads",
-        "Comprehensive monitoring and alerting are critical for healthcare applications"
+        "Keycloak's role-based model scales well when authorization rules are defined early in schema design",
+        "Swagger/OpenAPI documentation significantly reduces friction for contributors and API consumers",
+        "Liquibase migrations keep schema evolution traceable and reproducible across environments"
       ],
       "links": {
-        "live": "#"
+        "live": "https://opencarebd.com/",
+        "github": "https://github.com/Cipher-Text/opencare",
+        "api": "https://api.opencarebd.com/swagger-ui/index.html"
       }
     },
     {
-      "title": "National e-GP System",
-      "tagline": "Large-scale government procurement platform for transparent bidding",
+      "title": "Election Management System",
+      "tagline": "Distributed backend for a national election platform",
       "featured": true,
-      "problem": "Bangladesh government procurement process was manual, opaque, and prone to inefficiencies and corruption, affecting billions of dollars in public spending.",
-      "context": "National-level e-governance initiative handling thousands of government tenders annually. Required highest levels of security, transparency, and audit trails.",
-      "role": "Lead Java Developer",
+      "problem": "Managing candidate nominations, verification, and result workflows for a national election required a secure, high-availability distributed system capable of handling peak-period traffic.",
+      "context": "Commercial platform at Penta Global Ltd. comprising nearly 25 microservices. Supports 50,000 users and approximately 100,000 daily requests during election periods.",
+      "role": "Senior Software Engineer — backend delivery lead for candidate lifecycle, reporting service, and authorization.",
       "contributions": [
-        "Designed and implemented secure bidding workflow engine with multi-stage approvals",
-        "Built tamper-proof document management system with digital signatures",
-        "Created comprehensive audit logging system tracking all user actions",
-        "Developed advanced search and filtering for procurement opportunities",
-        "Implemented role-based access control for different stakeholder types"
+        "Led backend task allocation, grooming, planning, implementation guidance, and code reviews within a 30-person development team",
+        "Designed REST API contracts for nomination lifecycle, candidate review, verification, payment-linked submission, and report generation",
+        "Owned a reporting service that consolidated data from multiple services to generate official nomination, affidavit, candidate, schedule, and result PDF reports",
+        "Applied Keycloak-backed authorization and workflow validation across sensitive nomination state transitions",
+        "Replaced manual result-center, voter, candidate, and percentage-calculation workflows with digital system workflows for approximately 300 returning officers",
+        "Used RabbitMQ for election workflows and contributed to approximately 30 deployments via Dockerfiles, Nginx configuration, and GitHub Actions CI/CD"
       ],
-      "teamSize": 15,
-      "duration": "18 months",
-      "tech": ["Java", "Spring Boot", "PostgreSQL", "JavaScript", "PKI", "Digital Signatures"],
-      "architecture": "Monolithic architecture with modular design. Separate modules for Tender Management, Bidding, Evaluation, Contract Management, and Audit. Used PostgreSQL with complex table partitioning for performance.",
+      "teamSize": 30,
+      "duration": "August 2023 – Present",
+      "tech": ["Java", "Spring Boot", "Hibernate", "RabbitMQ", "Keycloak", "Docker", "Kubernetes", "GitHub Actions"],
+      "architecture": "Microservices architecture of nearly 25 services. Services communicate via REST and RabbitMQ. Keycloak handles SSO and RBAC. Deployed to a self-managed Kubernetes data center with CI/CD via GitHub Actions.",
       "challenges": [
         {
-          "challenge": "Ensuring absolute integrity of bid documents and preventing tampering",
-          "solution": "Implemented PKI-based digital signatures, document hashing with SHA-256, and immutable audit trails stored in append-only logs"
+          "challenge": "Coordinating data across nearly 25 distributed services while generating consistent official reports",
+          "solution": "Owned a dedicated reporting service that fetched and consolidated data from upstream services via REST, then rendered official PDF reports using a consistent template"
         },
         {
-          "challenge": "Managing complex multi-stage approval workflows with different authority levels",
-          "solution": "Built flexible workflow engine using state machines, supporting parallel and sequential approvals with configurable routing rules"
+          "challenge": "Enforcing nomination workflow rules across sensitive state transitions with different authority levels",
+          "solution": "Applied Keycloak-backed role authorization combined with server-side state transition validation on each API route"
         },
         {
-          "challenge": "Handling large file uploads (100MB+) for technical documents",
-          "solution": "Implemented chunked upload with resume capability, virus scanning integration, and S3-compatible object storage"
+          "challenge": "Supporting approximately 100,000 daily requests during election periods versus 10,000 outside elections",
+          "solution": "Deployed on Kubernetes with horizontal scaling; used Docker and CI/CD pipelines to support approximately 30 production deployments"
         }
       ],
       "metrics": [
         {
-          "label": "Tenders Processed",
-          "value": "10K+",
-          "description": "Annual procurement tenders"
+          "label": "Users",
+          "value": "50,000",
+          "description": "Internal platform users during election periods"
         },
         {
-          "label": "Cost Savings",
-          "value": "15%",
-          "description": "Reduction in procurement costs"
+          "label": "Peak Requests",
+          "value": "~100K/day",
+          "description": "Daily requests during election periods"
         },
         {
-          "label": "Process Time",
-          "value": "-40%",
-          "description": "Faster tender evaluation"
+          "label": "Services",
+          "value": "~25",
+          "description": "Running microservices in the platform"
         }
       ],
       "lessons": [
-        "Government systems require extensive audit trails and compliance features",
-        "Security and integrity are paramount when handling sensitive procurement data",
-        "Complex workflows need flexible, configurable engines to adapt to policy changes",
-        "Performance optimization is crucial when dealing with large document volumes"
+        "Owning a cross-service reporting layer requires careful dependency management and resilient data fetching",
+        "Keycloak's token introspection and role enforcement scales well in a microservices environment when applied consistently",
+        "CI/CD and Kubernetes support frequent deployments but require disciplined Dockerfile and Nginx configuration practices"
       ],
-      "links": {
-        "live": "#"
-      }
+      "links": {}
     },
     {
       "title": "Exam Management System",
-      "tagline": "End-to-end digital examination platform for educational institutions",
+      "tagline": "Production exam platform serving thousands of students and administrators",
       "featured": true,
-      "problem": "Educational institutions were managing exams manually, leading to errors in grading, delayed result publication, and lack of analytics for student performance.",
-      "context": "Deployed for universities and colleges serving 30,000+ students. Required support for multiple exam types, automated grading, and comprehensive reporting.",
-      "role": "Full Stack Developer",
+      "problem": "Educational institutions were managing exams manually, leading to operational inefficiency, delayed result processing, and limited visibility for administrators.",
+      "context": "Production system at Dynamic Solution Innovators Ltd. deployed across multiple educational institutions.",
+      "role": "Lead Developer — requirement analysis, database schema design, backend development, and production deployment.",
       "contributions": [
-        "Built exam scheduling and seat allocation algorithms",
-        "Developed automated grading engine for objective questions",
-        "Created Crystal Reports integration for result cards and transcripts",
-        "Implemented Flutter mobile app for students to view results",
-        "Optimized database for fast result processing and report generation"
+        "Led development end-to-end: requirement analysis, database schema design, backend implementation, and production deployment",
+        "Implemented Redis caching which reduced system response time by 30%",
+        "Built a real-time administrator dashboard associated with a reported 40% increase in system usage",
+        "Developed Crystal Reports integration for result cards, transcripts, and operational reports",
+        "Built a Flutter mobile interface for exam-related access",
+        "Used Jenkins for CI/CD and Locust for load testing"
       ],
       "teamSize": 6,
-      "duration": "10 months",
-      "tech": ["Java", "Spring Boot", "PostgreSQL", "Flutter", "Crystal Reports", "Redis"],
-      "architecture": "Three-tier architecture with Spring Boot backend, Flutter mobile frontend, and PostgreSQL database. Redis used for caching exam questions and student data during high-traffic result publication.",
+      "duration": "January 2022 – July 2023",
+      "tech": ["Java", "Spring Boot", "PostgreSQL", "Redis", "Flutter", "Crystal Reports", "Jenkins"],
+      "architecture": "Three-tier architecture — Spring Boot backend with PostgreSQL, Flutter mobile frontend, and Crystal Reports for document generation. Redis caching for high-traffic data paths. Jenkins for CI/CD, Locust for load testing.",
       "challenges": [
         {
-          "challenge": "Simultaneous result access by 30,000+ students causing server overload",
-          "solution": "Implemented Redis caching for result data, CDN for static assets, and staggered result publication by batch to distribute load"
+          "challenge": "High-traffic result access during result publication periods",
+          "solution": "Implemented Redis caching for result data and exam session information, reducing repeated database load during peak usage"
         },
         {
-          "challenge": "Complex grade calculation with weighted components and normalization",
-          "solution": "Built configurable grading engine with support for multiple grading schemes, curve fitting, and what-if analysis"
-        },
-        {
-          "challenge": "Generating thousands of PDF result cards within minutes",
-          "solution": "Parallelized Crystal Reports generation using worker pools, pre-rendered templates, and asynchronous job processing"
+          "challenge": "Generating printable result cards and administrative reports at scale",
+          "solution": "Integrated Crystal Reports with the backend to generate structured PDFs from database-backed report templates"
         }
       ],
       "metrics": [
         {
-          "label": "Students Served",
-          "value": "30K+",
-          "description": "Concurrent active students"
+          "label": "Response Time",
+          "value": "-30%",
+          "description": "Reduction via Redis caching"
         },
         {
-          "label": "Result Time",
-          "value": "-75%",
-          "description": "Faster result publication"
+          "label": "Administrators",
+          "value": "2,500+",
+          "description": "Active administrators using the system"
         },
         {
-          "label": "Error Rate",
-          "value": "-90%",
-          "description": "Reduction in grading errors"
+          "label": "Students",
+          "value": "~30,000",
+          "description": "Students supported for registration and payment"
         }
       ],
       "lessons": [
-        "Caching strategy is essential for handling traffic spikes during result publication",
-        "Parallel processing significantly reduces batch operation time",
-        "Configurable business logic engines provide flexibility for different institutions",
-        "Mobile-first approach improves student engagement and accessibility"
+        "Redis caching is high-impact for read-heavy exam and student data workflows",
+        "Load testing with Locust before production release surfaces bottlenecks that unit tests miss",
+        "Designing the database schema early — before implementation — significantly reduces migration debt"
       ],
-      "links": {
-        "live": "#"
-      }
+      "links": {}
     },
     {
-      "title": "Keycloak Authentication Service",
-      "tagline": "Enterprise-grade SSO and identity management platform",
-      "featured": true,
-      "problem": "Organizations were managing user authentication separately for each application, leading to security vulnerabilities, poor user experience, and high maintenance overhead.",
-      "context": "Centralized authentication service for enterprise clients with multiple applications. Required SSO, SAML/OAuth2 support, and integration with existing LDAP/Active Directory.",
-      "role": "Backend Engineer",
+      "title": "National e-GP System",
+      "tagline": "National Electronic Government Procurement platform",
+      "featured": false,
+      "problem": "The Bangladesh government procurement process required a digital platform that could handle complex workflows, large-file uploads, and strict data integrity across government agencies.",
+      "context": "National-level e-governance platform at Dohatec New Media, used across government, non-government, and enterprise organizations.",
+      "role": "Java Software Engineer — feature development, bug fixing, and stakeholder-aligned delivery.",
       "contributions": [
-        "Integrated Keycloak with Spring Boot applications using OAuth2/OIDC",
-        "Implemented custom user federation for legacy LDAP systems",
-        "Built role-based and attribute-based access control (RBAC/ABAC)",
-        "Created admin APIs for user and client management",
-        "Developed comprehensive security audit and monitoring dashboards"
+        "Implemented new features and resolved bugs in the procurement platform while preserving data integrity",
+        "Contributed to large-file upload workflows and relational data modeling for complex procurement entities",
+        "Applied iterative, agile, and incremental delivery practices in collaboration with stakeholders and product teams",
+        "Supported long-term software partnerships across government, non-government, and enterprise organizations"
       ],
-      "teamSize": 4,
-      "duration": "6 months",
-      "tech": ["Spring Boot", "Keycloak", "PostgreSQL", "OAuth2", "SAML", "LDAP"],
-      "architecture": "Keycloak server as identity provider, Spring Security OAuth2 resource servers for applications. Used PostgreSQL for Keycloak persistence and Redis for session management.",
+      "teamSize": null,
+      "duration": "October 2016 – December 2021",
+      "tech": ["Java", "Relational Data Modeling", "Enterprise Workflow"],
+      "architecture": "Enterprise application with modular procurement workflows, relational database modeling, and large-file upload support.",
       "challenges": [
         {
-          "challenge": "Migrating 100K+ users from legacy authentication to Keycloak without disruption",
-          "solution": "Implemented phased migration with user federation, allowing gradual transition while maintaining backward compatibility"
+          "challenge": "Handling large-file uploads reliably within an enterprise procurement workflow",
+          "solution": "Contributed to file upload handling and workflow integration to support document-heavy procurement submissions"
         },
         {
-          "challenge": "Integrating with diverse client applications using different auth protocols",
-          "solution": "Configured Keycloak to support multiple protocols (OAuth2, SAML, LDAP) simultaneously with protocol mappers"
-        },
-        {
-          "challenge": "Managing complex permission hierarchies across applications",
-          "solution": "Designed flexible RBAC model with composite roles, group-based permissions, and fine-grained resource-level authorization"
+          "challenge": "Maintaining data privacy and integrity across a multi-stakeholder government platform",
+          "solution": "Applied access controls and data validation practices aligned with platform requirements during feature development and bug fixes"
         }
       ],
-      "metrics": [
-        {
-          "label": "Users Migrated",
-          "value": "100K+",
-          "description": "From legacy to Keycloak"
-        },
-        {
-          "label": "SSO Apps",
-          "value": "20+",
-          "description": "Integrated applications"
-        },
-        {
-          "label": "Auth Time",
-          "value": "<100ms",
-          "description": "Average token validation"
-        }
-      ],
+      "metrics": [],
       "lessons": [
-        "Centralized authentication significantly improves security posture and user experience",
-        "User federation enables gradual migration without big-bang cutover",
-        "Flexible authorization models are crucial for accommodating diverse application needs",
-        "Monitoring and audit logging are essential for security compliance"
+        "Long-running government platform work develops deep familiarity with enterprise-grade workflow complexity",
+        "Data integrity constraints and stakeholder alignment are as important as technical implementation in government systems"
       ],
-      "links": {
-        "live": "#",
-        "github": "#"
-      }
+      "links": {}
     }
   ],
-  "_note": "These detailed project case studies can be used in the Developer and Client views. Update links with actual URLs and add screenshots/diagrams in the public folder."
+  "_note": "Metrics and case details must match career/master/ verified facts. Do not add unverified metrics, fabricated team sizes, or role titles not reflected in the resume."
 }

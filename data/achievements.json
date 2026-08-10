@@ -1,24 +1,24 @@
 {
   "achievements": [
     {
-      "title": "Open Care - Health-Tech Platform",
-      "description": "Scalable health-tech platform connecting patients, doctors, and organizations across Bangladesh"
+      "title": "30% Response Time Reduction",
+      "description": "Reduced exam management system response time by 30% through Redis caching and backend performance improvements at Dynamic Solution Innovators Ltd."
     },
     {
-      "title": "Election Management System",
-      "description": "Robust system for managing elections, including candidate registration, center processing, and results tabulation"
+      "title": "Election Platform at Scale",
+      "description": "Contributed to backend delivery for a platform supporting 50,000 users and approximately 100,000 daily requests during election periods — compared with ~10,000 requests per day outside elections."
     },
     {
-      "title": "Exam Management System",
-      "description": "Java-based system serving 30,000+ students with Crystal Reports, Flutter mobile app, and real-time dashboards"
+      "title": "Backend Lead — 30-Person Team",
+      "description": "Served as backend team lead at Penta Global Ltd., handling task allocation, grooming, planning, implementation guidance, and code reviews within a 30-person development team."
     },
     {
-      "title": "National e-GP System",
-      "description": "Electronic Government Procurement platform with secure file handling, data modeling, and integrity features"
+      "title": "30,000+ Students Supported",
+      "description": "Led backend development of a production exam system supporting registration and payment management for nearly 30,000 students, 2,500+ administrators, and 1,000 exam invigilators."
     },
     {
-      "title": "Team Leadership & Architecture",
-      "description": "Leading development teams and architecting secure, scalable enterprise solutions with Keycloak authentication"
+      "title": "Two Peer-Reviewed Publications",
+      "description": "Co-authored two peer-reviewed research publications: Temporal Relation Extraction using Apriori Algorithm (ICIEV, 2016) and Attendance Monitoring System with Fraud Prevention Technique (International Journal of Engineering and Technology, 2018)."
     }
   ]
 }

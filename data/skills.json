@@ -1,11 +1,11 @@
 {
   "recruiterSkills": [
-    { "name": "Java & Spring Boot (Microservices)", "level": 95 },
-    { "name": "System Architecture & Scalability Design", "level": 93 },
-    { "name": "DevSecOps (Docker, Kubernetes, CI/CD)", "level": 90 },
-    { "name": "React & Next.js (Full-Stack Integration)", "level": 85 },
-    { "name": "PostgreSQL, Redis & Data Modeling", "level": 88 },
-    { "name": "Cloud Infrastructure (GCP, AWS)", "level": 84 }
+    { "name": "Java & Spring Boot", "level": 95 },
+    { "name": "Backend Architecture & API Design", "level": 90 },
+    { "name": "Microservices & Distributed Systems", "level": 90 },
+    { "name": "PostgreSQL & Redis", "level": 88 },
+    { "name": "Keycloak & Security (RBAC, JWT)", "level": 88 },
+    { "name": "Docker, Kubernetes & CI/CD", "level": 85 }
   ],
   "techStack": [
     {
@@ -13,20 +13,18 @@
       "items": [
         "Java",
         "Spring Boot",
-        "Spring Cloud",
         "Hibernate/JPA",
-        "REST & gRPC APIs",
-        "Multi-Tenant Systems",
-        "Event-Driven Architecture"
+        "REST APIs",
+        "RabbitMQ",
+        "Microservices Architecture",
+        "ASP.NET"
       ]
     },
     {
       "category": "Frontend",
       "items": [
-        "React.js",
         "Next.js",
         "TypeScript",
-        "Redux",
         "TailwindCSS"
       ]
     },
@@ -34,44 +32,42 @@
       "category": "Databases & Caching",
       "items": [
         "PostgreSQL",
-        "MySQL",
+        "SQL Server",
         "Redis",
         "Liquibase",
-        "MongoDB"
+        "Relational Data Modeling"
       ]
     },
     {
-      "category": "DevSecOps & Cloud",
+      "category": "DevOps & Infrastructure",
       "items": [
         "Docker",
         "Kubernetes",
         "GitHub Actions",
         "Jenkins",
-        "Terraform",
-        "Helm",
-        "Linux/Unix",
         "Nginx",
-        "GCP",
-        "AWS"
+        "CI/CD Pipelines",
+        "Locust Load Testing",
+        "Linux/Unix"
       ]
     },
     {
       "category": "Security & Identity",
       "items": [
         "Keycloak",
-        "SSO",
+        "JWT Token Introspection",
         "Role-Based Access Control (RBAC)",
-        "Token-Based Authentication"
+        "Data Privacy & Integrity"
       ]
     },
     {
-      "category": "Monitoring & Reliability",
+      "category": "Delivery & Leadership",
       "items": [
-        "Prometheus",
-        "Grafana",
-        "Log Management",
-        "Incident Response",
-        "Performance Tuning"
+        "Technical Leadership",
+        "Agile Development",
+        "Code Review & Mentoring",
+        "Backend Performance Optimization",
+        "Stakeholder Collaboration"
       ]
     }
   ]

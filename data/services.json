@@ -3,55 +3,56 @@
     {
       "icon": "TrendingUp",
       "title": "System Architecture & Scalability Consulting",
-      "description": "Designing resilient, multi-tenant, and cloud-native systems that grow with your business",
-      "price": "From $5k"
+      "description": "Designing resilient backend systems and microservices architectures that grow with your business",
+      "price": "Get in touch"
     },
     {
       "icon": "Code",
-      "title": "Backend Development (Spring Boot / Node.js)",
-      "description": "Building robust, maintainable APIs and distributed systems — optimized for performance and reliability",
-      "price": "From $8k"
+      "title": "Backend Development (Java / Spring Boot)",
+      "description": "Building robust, maintainable REST APIs and distributed systems — optimized for performance and reliability",
+      "price": "Get in touch"
     },
     {
       "icon": "Cloud",
-      "title": "DevSecOps & Cloud Infrastructure",
-      "description": "Automating deployments, observability, and compliance with modern DevOps pipelines on GCP/AWS/Kubernetes",
-      "price": "From $6k"
+      "title": "DevOps & Infrastructure",
+      "description": "Containerizing applications, setting up CI/CD pipelines, configuring Nginx, and supporting Kubernetes deployments",
+      "price": "Get in touch"
     },
     {
       "icon": "Layers",
       "title": "Full-Stack Product Development",
-      "description": "End-to-end product design and engineering using React / Next.js + Spring Boot — from idea to deployment",
-      "price": "From $10k"
+      "description": "End-to-end product engineering using Next.js + Spring Boot — from architecture design to production deployment",
+      "price": "Get in touch"
     },
     {
       "icon": "Lightbulb",
       "title": "Tech Advisory for Startups",
-      "description": "Helping early-stage founders validate ideas, design architecture, and plan technical execution",
-      "price": "From $2k"
+      "description": "Helping early-stage founders validate ideas, design backend architecture, and plan technical execution",
+      "price": "Get in touch"
     }
   ],
   "caseStudies": [
     {
-      "client": "Open Care",
-      "project": "Healthcare Ecosystem Platform",
-      "result": "Built a nationwide healthcare ecosystem connecting patients, doctors, and hospitals with real-time data and scalability",
-      "metrics": ["10,000+ active users", "Multi-tenant microservices", "6 months delivery"],
-      "technologies": ["Spring Boot", "Next.js", "Keycloak", "Postgres", "Redis"]
+      "client": "Open-Care",
+      "project": "Healthcare Information Platform",
+      "result": "Built an open-source healthcare-information platform connecting patients to searchable doctor, hospital, ambulance, and blood-donation resources across Bangladesh",
+      "metrics": ["Open-source", "Live at opencarebd.com", "Swagger/OpenAPI documented"],
+      "technologies": ["Spring Boot", "PostgreSQL", "Keycloak", "Redis", "Docker", "Next.js"]
     },
     {
-      "client": "University",
-      "project": "University Management System",
-      "result": "Streamlined operations for 10k+ students, staff, and faculty across multiple campuses",
-      "metrics": ["20+ subsystems", "Stripe payments", "5 months delivery"],
-      "technologies": ["GCP", "CI/CD pipelines"]
+      "client": "Government (Penta Global)",
+      "project": "Election Management System",
+      "result": "Contributed backend delivery for a national election platform supporting 50,000 users and approximately 100,000 daily requests during election periods across nearly 25 microservices",
+      "metrics": ["~25 microservices", "50,000 users", "~100K daily requests at peak"],
+      "technologies": ["Spring Boot", "RabbitMQ", "Keycloak", "Docker", "Kubernetes"]
     },
     {
-      "client": "Diagnostic Center",
-      "project": "Diagnostic Center Management System",
-      "result": "Digitized patient data, test workflows, and doctor commissions in a cloud-connected system",
-      "metrics": ["5x faster onboarding", "Multi-role access", "3 months delivery"]
+      "client": "Education (DSI)",
+      "project": "Exam Management System",
+      "result": "Led backend development of a production exam system, reducing response time by 30% via Redis caching and supporting operations for 2,500+ administrators and nearly 30,000 students",
+      "metrics": ["30% faster response", "2,500+ admins", "~30,000 students"],
+      "technologies": ["Spring Boot", "PostgreSQL", "Redis", "Flutter", "Crystal Reports"]
     }
   ],
-  "workProcess": ["Discovery", "Architecture Design", "Development & Integration", "Launch & Optimize"]
+  "workProcess": ["Discovery & Requirements", "Architecture Design", "Development & Integration", "Deployment & Handover"]
 }
