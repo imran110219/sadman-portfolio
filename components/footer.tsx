@@ -1,65 +1,59 @@
-"use client";
-
 import {
   Mail,
-  Linkedin,
   Github,
-  Calendar,
+  Linkedin,
   BookOpen,
-  Facebook,
   User,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { trackContactClick } from "@/lib/analytics";
+import { getProfile } from "@/lib/data";
 
 export function Footer() {
+  const { social } = getProfile();
   return (
-    <footer className="border-t border-border bg-card/50 backdrop-blur sticky bottom-0 z-30">
+    <footer className="border-t border-border bg-card/50">
       <div className="container mx-auto px-4 py-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2025 Sadman. Building the future, one commit at a time.
+            © {new Date().getFullYear()} Sadman Sobhan. Backend engineering for systems that matter.
           </p>
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon" asChild>
               <a
-                href="mailto:imran110219@gmail.com"
+                href={"mailto:" + social.email}
                 aria-label="Email"
-                onClick={() => trackContactClick("email")}
               >
                 <Mail className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a
-                href="https://github.com/imran110219"
+                href={social.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                onClick={() => trackContactClick("github")}
               >
                 <Github className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a
-                href="https://medium.com/@imran110219"
+                href={social.medium}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Medium"
-                onClick={() => trackContactClick("medium")}
               >
                 <BookOpen className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a
-                href="https://www.facebook.com/sadmansobhan/"
+                href="https://www.linkedin.com/in/sadman-sobhan"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Facebook"
+                aria-label="LinkedIn"
               >
-                <Facebook className="h-5 w-5" />
+                <Linkedin className="h-5 w-5" />
               </a>
             </Button>
             <Button variant="ghost" size="icon" asChild>

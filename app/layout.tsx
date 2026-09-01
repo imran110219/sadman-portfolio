@@ -9,21 +9,21 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: {
     default:
-      "Sadman Sobhan - Senior Software Engineer | Backend & Full-Stack Developer",
+      "Sadman Sobhan | Senior Backend Engineer & Technical Lead",
     template: "%s | Sadman Sobhan",
   },
   description:
-    "Senior Software Engineer with 9+ years of experience building resilient, scalable backend systems. Expert in Java, Spring Boot, React, PostgreSQL, and cloud technologies. Available for opportunities.",
+    "Senior Backend Engineer with 9+ years of experience designing and delivering scalable Java and Spring Boot systems. Backend lead with experience in PostgreSQL, Redis, RabbitMQ, Kubernetes, and mission-critical platforms.",
   keywords: [
     "Senior Software Engineer",
     "Backend Developer",
-    "Full-Stack Developer",
+    "Technical Lead",
     "Java Developer",
     "Spring Boot",
     "React",
     "PostgreSQL",
     "Microservices",
-    "Cloud Architecture",
+    "Backend Architecture",
     "Bangladesh Software Engineer",
   ],
   authors: [{ name: "Sadman Sobhan" }],
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Sadman Sobhan - Senior Software Engineer",
+    title: "Sadman Sobhan | Senior Backend Engineer & Technical Lead",
     description:
-      "I build resilient backend systems that scale. 9+ years of experience in Java, Spring Boot, and full-stack development.",
+      "Senior backend engineer with 9+ years of experience in Java, Spring Boot, distributed systems, and technical leadership.",
     url: "https://sadmansobhan.com",
     siteName: "Sadman Sobhan Portfolio",
     locale: "en_US",
@@ -51,15 +51,15 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Sadman Sobhan - Senior Software Engineer",
+        alt: "Sadman Sobhan - Senior Backend Engineer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sadman Sobhan - Senior Software Engineer",
+    title: "Sadman Sobhan | Senior Backend Engineer & Technical Lead",
     description:
-      "I build resilient backend systems that scale. 9+ years of experience in Java, Spring Boot, and full-stack development.",
+      "Senior backend engineer with 9+ years of experience in Java, Spring Boot, distributed systems, and technical leadership.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -104,12 +104,13 @@ export default function RootLayout({
             "@context": "https://schema.org",
             "@type": "Person",
             name: "Sadman Sobhan",
-            jobTitle: "Senior Software Engineer",
+            jobTitle: "Senior Backend Engineer & Technical Lead",
             description:
-              "Senior Software Engineer with 9+ years of experience building resilient, scalable backend systems",
+              "Senior Backend Engineer with 9+ years of experience designing and delivering scalable backend systems",
             url: "https://sadmansobhan.com",
             image: "https://sadmansobhan.com/profile.jpg",
             sameAs: [
+              "https://linkedin.com/in/sadman-sobhan",
               "https://github.com/imran110219",
               "https://medium.com/@imran110219",
               "https://www.hackerrank.com/profile/imran110219",
@@ -117,22 +118,15 @@ export default function RootLayout({
             knowsAbout: [
               "Java",
               "Spring Boot",
-              "React",
               "PostgreSQL",
-              "Microservices Architecture",
-              "Cloud Computing",
-              "Backend Development",
-              "Full-Stack Development",
+              "Redis",
+              "RabbitMQ",
+              "Distributed Systems",
+              "Backend Architecture",
+              "Kubernetes",
+              "Software Engineering",
             ],
             email: "imran110219@gmail.com",
-            alumniOf: {
-              "@type": "CollegeOrUniversity",
-              name: "Educational Institution",
-            },
-            worksFor: {
-              "@type": "Organization",
-              name: "Independent Software Engineer",
-            },
           })}
         </Script>
       </head>

@@ -49,21 +49,3 @@ export const trackContactClick = (platform: string) => {
 export const trackDownload = (type: string) => {
   event("download", "resume", type);
 };
-
-// Get analytics data (simplified version for demo)
-export const getAnalyticsData = async () => {
-  // In a real implementation, you would use Google Analytics Reporting API
-  // For now, we'll simulate realistic data
-  const baseViews = 8432;
-  const baseVisitors = 2156;
-
-  // Add some realistic variance
-  const variance = Math.floor(Math.random() * 100) - 50;
-
-  return {
-    pageViews: baseViews + variance,
-    visitors: baseVisitors + Math.floor(variance / 2),
-    sessionsToday: Math.floor(Math.random() * 50) + 25,
-    averageSessionDuration: Math.floor(Math.random() * 60) + 120, // seconds
-  };
-};

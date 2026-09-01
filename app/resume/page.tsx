@@ -22,8 +22,8 @@ export default function ResumePage() {
             <a href="/" className="mb-5 inline-block text-sm text-primary hover:underline">
               ← Back to portfolio
             </a>
-            <h1 className="text-4xl font-bold md:text-5xl">{profile.name} Sobhan</h1>
-            <p className="mt-2 text-xl text-muted-foreground">Senior Backend Engineer</p>
+            <h1 className="text-4xl font-bold md:text-5xl">{profile.name}</h1>
+            <p className="mt-2 text-xl text-muted-foreground">{profile.title}</p>
             <p className="mt-2 text-sm text-muted-foreground">{profile.location}</p>
           </div>
           <Button asChild className="shrink-0 gap-2">

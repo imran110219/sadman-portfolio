@@ -22,11 +22,6 @@ export interface Profile {
 }
 
 // Skills Types
-export interface Skill {
-  name: string;
-  level: number;
-}
-
 export interface TechStackItem {
   name: string;
   icon?: string;
@@ -38,7 +33,6 @@ export interface TechStackCategory {
 }
 
 export interface SkillsData {
-  recruiterSkills: Skill[];
   techStack: TechStackCategory[];
 }
 

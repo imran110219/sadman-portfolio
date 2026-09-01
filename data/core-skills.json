@@ -1,29 +1,9 @@
 {
   "categories": [
-    {
-      "title": "Backend",
-      "emoji": "💻",
-      "skills": ["Java, Spring Boot", "Hibernate, JPA, Liquibase", "REST APIs, RabbitMQ", "Microservices Architecture"]
-    },
-    {
-      "title": "Frontend",
-      "emoji": "🎨",
-      "skills": ["Next.js, TypeScript", "JavaScript", "TailwindCSS"]
-    },
-    {
-      "title": "Databases",
-      "emoji": "🗄️",
-      "skills": ["PostgreSQL, SQL Server", "Redis Caching", "Relational Data Modeling", "Query Optimization"]
-    },
-    {
-      "title": "DevOps",
-      "emoji": "🚀",
-      "skills": ["Docker, Kubernetes", "GitHub Actions, Jenkins", "Nginx, CI/CD", "Linux/Unix"]
-    },
-    {
-      "title": "Security & Leadership",
-      "emoji": "🔐",
-      "skills": ["Keycloak, SSO", "Role-Based Access Control", "Technical Leadership", "Agile Delivery"]
-    }
+    { "title": "Backend Engineering", "emoji": "↗", "skills": ["Java 17/21", "Spring Boot", "REST API design", "Spring Security", "JPA, Liquibase"] },
+    { "title": "Data & Performance", "emoji": "↗", "skills": ["PostgreSQL", "Redis", "SQL optimization", "Indexing", "Caching", "Data modeling"] },
+    { "title": "Distributed Systems", "emoji": "↗", "skills": ["RabbitMQ", "Event-driven workflows", "Retry / timeout", "Idempotency", "Resilience patterns"] },
+    { "title": "Platform & Delivery", "emoji": "↗", "skills": ["Docker", "Kubernetes", "Nginx", "CI/CD", "Linux / Unix", "Load testing"] },
+    { "title": "Identity & Security", "emoji": "↗", "skills": ["OAuth2", "JWT", "Keycloak", "RBAC", "Secure API design"] }
   ]
 }

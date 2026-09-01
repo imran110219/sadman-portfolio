@@ -1,12 +1,4 @@
 {
-  "recruiterSkills": [
-    { "name": "Java & Spring Boot", "level": 95 },
-    { "name": "Backend Architecture & API Design", "level": 90 },
-    { "name": "Microservices & Distributed Systems", "level": 90 },
-    { "name": "PostgreSQL & Redis", "level": 88 },
-    { "name": "Keycloak & Security (RBAC, JWT)", "level": 88 },
-    { "name": "Docker, Kubernetes & CI/CD", "level": 85 }
-  ],
   "techStack": [
     {
       "category": "Backend & Architecture",

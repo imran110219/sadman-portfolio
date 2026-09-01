@@ -72,13 +72,6 @@ export const getClientData = (): ClientData => {
 };
 
 /**
- * Get recruiter skills (skills with proficiency levels)
- */
-export const getRecruiterSkills = () => {
-  return (skillsData as SkillsData).recruiterSkills;
-};
-
-/**
  * Get tech stack categories
  */
 export const getTechStack = () => {

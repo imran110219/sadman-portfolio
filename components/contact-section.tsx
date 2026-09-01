@@ -1,143 +1,23 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, MessageSquare, Calendar } from "lucide-react";
+import { BookOpen, Github, Linkedin, Mail } from "lucide-react";
 import { getProfile } from "@/lib/data";
 
 export function ContactSection() {
-  const profile = getProfile();
-
-  const contactMethods = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: profile.social.email,
-      href: `mailto:${profile.social.email}`,
-      description: "Best for detailed inquiries",
-    },
-    {
-      icon: Github,
-      label: "GitHub",
-      value: "@imran110219",
-      href: profile.social.github,
-      description: "Check out my code",
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      value: "Connect with me",
-      href: profile.social.linkedin,
-      description: "Professional networking",
-    },
+  const { social, availability } = getProfile();
+  const methods = [
+    { label: "LinkedIn", value: "Sadman Sobhan", href: social.linkedin!, Icon: Linkedin },
+    { label: "GitHub", value: "Sadman Sobhan", href: social.github!, Icon: Github },
+    { label: "Email", value: social.email, href: "mailto:" + social.email, Icon: Mail },
+    { label: "Medium", value: "Engineering notes", href: social.medium!, Icon: BookOpen },
   ];
 
   return (
-    <section id="contact" className="space-y-8">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="text-center"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
-          Let's Work Together
-        </h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          I'm always open to discussing new projects, creative ideas, or
-          opportunities to be part of your vision.
-        </p>
-      </motion.div>
-
-      {/* Contact Methods */}
-      <div className="max-w-2xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="space-y-4"
-        >
-          <Card className="p-6 bg-card">
-            <h3 className="text-xl font-bold mb-4">Other Ways to Connect</h3>
-            <div className="space-y-4">
-              {contactMethods.map((method, index) => {
-                const IconComponent = method.icon;
-                return (
-                  <motion.div
-                    key={method.label}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.4 + index * 0.1 }}
-                  >
-                    <Button
-                      variant="outline"
-                      className="w-full justify-start h-auto py-4 px-4 hover:bg-muted"
-                      asChild
-                    >
-                      <a
-                        href={method.href}
-                        target={
-                          method.href?.startsWith("http") ? "_blank" : undefined
-                        }
-                        rel={
-                          method.href?.startsWith("http")
-                            ? "noopener noreferrer"
-                            : undefined
-                        }
-                      >
-                        <div className="flex items-start gap-4 w-full">
-                          <IconComponent className="h-5 w-5 mt-0.5 flex-shrink-0 text-primary" />
-                          <div className="flex-grow text-left">
-                            <div className="font-semibold mb-1">
-                              {method.label}
-                            </div>
-                            <div className="text-sm text-muted-foreground mb-1">
-                              {method.value}
-                            </div>
-                            <div className="text-xs text-muted-foreground">
-                              {method.description}
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </Button>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </Card>
-
-          {/* Availability Status */}
-          <Card className="p-6 bg-gradient-to-br from-chart-3/10 to-primary/10">
-            <div className="flex items-start gap-3">
-              <Calendar className="h-5 w-5 text-chart-3 mt-0.5" />
-              <div>
-                <h4 className="font-semibold mb-1">
-                  {profile.availability || "Available for Opportunities"}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  I'm currently open to full-time roles, consulting projects,
-                  and freelance opportunities. Response time: Within 24 hours.
-                </p>
-              </div>
-            </div>
-          </Card>
-
-          {/* Quick Response Time */}
-          <Card className="p-6 bg-muted/30">
-            <div className="flex items-start gap-3">
-              <MessageSquare className="h-5 w-5 text-accent mt-0.5" />
-              <div>
-                <h4 className="font-semibold mb-1">Quick Response</h4>
-                <p className="text-sm text-muted-foreground">
-                  I typically respond to all inquiries within 24 hours during
-                  business days. For urgent matters, please mention it in your
-                  message.
-                </p>
-              </div>
-            </div>
-          </Card>
-        </motion.div>
+    <section id="contact" className="scroll-mt-24 rounded-2xl border border-border bg-card p-7 md:p-10" aria-labelledby="contact-heading">
+      <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-end">
+        <div><p className="text-sm font-semibold uppercase tracking-[0.18em] text-primary">Contact</p><h2 id="contact-heading" className="mt-3 text-3xl font-bold md:text-4xl">Let&apos;s build reliable systems.</h2><p className="mt-4 max-w-xl leading-7 text-muted-foreground">{availability}. Open to Senior Backend Engineer, Technical Lead, and backend architecture opportunities.</p></div>
+        <a href={"mailto:" + social.email} className="inline-flex h-11 items-center justify-center gap-2 rounded-md bg-primary px-5 text-sm font-medium text-primary-foreground hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><Mail className="h-4 w-4" /> Email Sadman</a>
+      </div>
+      <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {methods.map(({ label, value, href, Icon }) => <a key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="flex items-center gap-3 rounded-lg border border-border p-4 transition-colors hover:border-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"><Icon className="h-5 w-5 text-primary" /><span><span className="block text-sm font-semibold">{label}</span><span className="block text-xs text-muted-foreground">{value}</span></span></a>)}
       </div>
     </section>
   );

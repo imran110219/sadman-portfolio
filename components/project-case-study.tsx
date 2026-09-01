@@ -127,7 +127,7 @@ export function ProjectCaseStudyCard({
         <section className="space-y-4">
           <div className="flex items-center gap-2 text-primary">
             <Target className="h-5 w-5" />
-            <h4 className="text-xl font-bold">Problem & Context</h4>
+          <h4 className="text-xl font-bold">Problem / Context</h4>
           </div>
           <div className="space-y-3">
             <div>
@@ -149,7 +149,7 @@ export function ProjectCaseStudyCard({
         <section className="space-y-4">
           <div className="flex items-center gap-2 text-accent">
             <Code2 className="h-5 w-5" />
-            <h4 className="text-xl font-bold">My Contributions</h4>
+          <h4 className="text-xl font-bold">My Responsibility</h4>
           </div>
           <ul className="space-y-2">
             {project.contributions.map((contribution, idx) => (
@@ -165,7 +165,7 @@ export function ProjectCaseStudyCard({
         <section className="space-y-4">
           <div className="flex items-center gap-2 text-chart-1">
             <Wrench className="h-5 w-5" />
-            <h4 className="text-xl font-bold">Technical Architecture</h4>
+          <h4 className="text-xl font-bold">Architecture & Key Decisions</h4>
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -207,7 +207,7 @@ export function ProjectCaseStudyCard({
             <div className="space-y-4">
               {project.challenges.map((item, idx) => (
                 <Card key={idx} className="p-4 bg-muted/20">
-                  <p className="font-semibold text-sm text-chart-2 mb-2">
+                    <p className="font-semibold text-sm text-chart-2 mb-2">
                     Challenge #{idx + 1}
                   </p>
                   <p className="text-card-foreground mb-3">{item.challenge}</p>
@@ -254,8 +254,8 @@ export function ProjectCaseStudyCard({
         {/* Lessons Learned */}
         {project.lessons.length > 0 && (
           <section className="space-y-3">
-            <h4 className="text-lg font-bold text-card-foreground">
-              Key Takeaways
+              <h4 className="text-lg font-bold text-card-foreground">
+              Lessons Learned
             </h4>
             <ul className="space-y-2">
               {project.lessons.map((lesson, idx) => (
