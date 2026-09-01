@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { DownloadCVButton } from "@/components/download-cv-button";
 import { Logo } from "@/components/logo";
-import { Home, Briefcase, Code2, Mail, BookOpen } from "lucide-react";
+import { Home, Briefcase, Code2, BookOpen } from "lucide-react";
 
 interface NavigationProps {
   activeView: string | null;
@@ -84,15 +84,6 @@ export function Navigation({
                 >
                   <Code2 className="h-4 w-4" />
                   Projects
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => scrollToSection("contact")}
-                  className="gap-2"
-                >
-                  <Mail className="h-4 w-4" />
-                  Contact
                 </Button>
               </>
             )}

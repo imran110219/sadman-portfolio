@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ContactForm } from "@/components/contact-form";
 import { Mail, Github, Linkedin, MessageSquare, Calendar } from "lucide-react";
 import { getProfile } from "@/lib/data";
 
@@ -50,21 +49,12 @@ export function ContactSection() {
         </p>
       </motion.div>
 
-      <div className="grid lg:grid-cols-2 gap-8">
-        {/* Contact Form */}
+      {/* Contact Methods */}
+      <div className="max-w-2xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          animate={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-        >
-          <ContactForm />
-        </motion.div>
-
-        {/* Contact Methods */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3 }}
           className="space-y-4"
         >
           <Card className="p-6 bg-card">
