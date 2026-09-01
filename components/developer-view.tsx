@@ -101,22 +101,29 @@ export function DeveloperView() {
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="gap-2 bg-transparent"
-                  >
-                    <Github className="h-4 w-4" />
-                    Code
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="gap-2 bg-transparent"
-                  >
-                    <ExternalLink className="h-4 w-4" />
-                    Demo
-                  </Button>
+                  {project.github && (
+                    <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4" />
+                        Code
+                      </a>
+                    </Button>
+                  )}
+                  {(project.demo || project.link) && (
+                    <Button variant="outline" size="sm" className="gap-2 bg-transparent" asChild>
+                      <a href={project.demo || project.link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4" />
+                        Demo
+                      </a>
+                    </Button>
+                  )}
+                  {(project.title === "Open-Care" || project.title === "Election Management System" || project.title === "Exam Management System") && (
+                    <Button variant="ghost" size="sm" asChild>
+                      <a href={`/projects/${project.title.toLowerCase().replace(/\s+/g, "-")}`}>
+                        Case study
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </Card>
             </motion.div>

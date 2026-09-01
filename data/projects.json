@@ -6,6 +6,7 @@
       "tech": ["Java", "Spring Boot", "PostgreSQL", "Redis", "Keycloak", "Docker", "Next.js"],
       "link": "https://opencarebd.com/",
       "github": "https://github.com/Cipher-Text/opencare",
+      "demo": "https://opencarebd.com/",
       "featured": true
     },
     {
@@ -13,6 +14,7 @@
       "description": "Full-stack editorial platform for publishing and managing news and fact-focused content. Built and deployed the Next.js frontend, Strapi backend and content APIs, PostgreSQL database, and Cloudflare file storage.",
       "tech": ["Next.js", "Strapi", "PostgreSQL", "Cloudflare"],
       "link": "https://www.factlensbd.com/",
+      "demo": "https://www.factlensbd.com/",
       "featured": true
     },
     {

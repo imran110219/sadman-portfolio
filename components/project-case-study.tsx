@@ -58,6 +58,7 @@ export interface ProjectCaseStudy {
     live?: string;
     github?: string;
     demo?: string;
+    api?: string;
   };
 
   // Visual Assets
@@ -308,6 +309,19 @@ export function ProjectCaseStudyCard({
                 >
                   <ExternalLink className="h-4 w-4" />
                   Demo
+                </a>
+              </Button>
+            )}
+            {project.links.api && (
+              <Button variant="outline" asChild>
+                <a
+                  href={project.links.api}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="gap-2"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  API Docs
                 </a>
               </Button>
             )}
