@@ -110,7 +110,7 @@ export default function RootLayout({
             url: "https://sadmansobhan.com",
             image: "https://sadmansobhan.com/profile.jpg",
             sameAs: [
-              "https://linkedin.com/in/sadman-sobhan",
+              "https://linkedin.com/in/sadmansobhan",
               "https://github.com/imran110219",
               "https://medium.com/@imran110219",
               "https://www.hackerrank.com/profile/imran110219",
