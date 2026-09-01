@@ -22,7 +22,7 @@ export function Navigation() {
         <div className="hidden items-center gap-1 lg:flex">
           {links.map(([label, href]) => <Link key={label} href={href} className="rounded-md px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">{label}</Link>)}
         </div>
-        <div className="flex items-center gap-2"><DownloadCVButton variant="ghost" size="sm" className="hidden sm:inline-flex" /><ThemeToggle /><Button variant="ghost" size="icon" className="lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</Button></div>
+        <div className="flex items-center gap-3"><DownloadCVButton variant="ghost" size="sm" className="hidden sm:inline-flex" /><ThemeToggle /><Button variant="ghost" size="icon" className="lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}</Button></div>
       </nav>
       {open && <div className="border-t border-border bg-background px-4 py-3 lg:hidden"><div className="container mx-auto grid max-w-6xl gap-1">{links.map(([label, href]) => <Link key={label} href={href} onClick={() => setOpen(false)} className="rounded-md px-3 py-3 text-sm hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">{label}</Link>)}</div></div>}
     </header>
